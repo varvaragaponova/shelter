@@ -18,8 +18,10 @@ body {
 /* ---HEADER---*/
 
 header {
+    position: relative;
+    background: transparent;
     width: 100%;
-    background: linear-gradient(to bottom right, #5B483A, #433730, #211F20);
+    padding: 60px 0;
     background-repeat: no-repeat;
 }
 
@@ -27,17 +29,16 @@ header {
     width: calc(1280px - 5.5%);
     display: flex;
     margin: 0 auto;
-    padding: 60px 0;
     justify-content: space-between;
     align-items: center;
 }
 
 .logo {
-    letter-spacing: 1.5px;
+    letter-spacing: 0.094rem;
 }
 
 .logo_title {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     font: 400 32px 'Georgia';
     color: #F1CDB3;
 }
@@ -64,4 +65,50 @@ header {
 .shelter_list .shelter_item:first-child {
     border-bottom: solid 3px #F1CDB3;
     color: #FAFAFA;
+}
+
+/*---Section "Not only"---*/
+
+.not_only {
+    display: flex;
+    justify-content: space-around;
+    margin-top: -185px;
+    background: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #5B483A 0.01%, #574538 8.33%, #544337 13.54%, #4F4035 22.92%, #483B33 35.42%, #433730 46.35%, #3D332E 57.81%, #362F2B 70.83%, #2E2928 85.42%, #262425 100%);
+    background-repeat: no-repeat;
+}
+
+.not_only__wrapper {
+    max-width: 460px;
+    margin-top: 108px;
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+}
+
+.not_only__img {
+    margin-top: 184px;
+}
+
+h1 {
+    max-width: 310px;
+    font: 400 44px 'Georgia';
+    color: #FFFFFF;
+    line-height: 130%;
+}
+
+.information_text {
+    font: 400 15px 'Arial', sans-serif;
+    color: #CDCDCD;
+    line-height: 160%;
+}
+
+.not_only__button {
+    width: 207px;
+    height: 52px;
+    border-radius: 100px;
+    border: none;
+    background-color: #F1CDB3;
+    color: #292929;
+    font: 400 17px 'Georgia';
+    letter-spacing: 0.063rem;
 }
