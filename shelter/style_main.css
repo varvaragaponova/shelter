@@ -112,3 +112,31 @@ h1 {
     font: 400 17px 'Georgia';
     letter-spacing: 0.063rem;
 }
+
+/*--Section "About"--*/
+
+.about .content_container {
+    width: calc(1280px - 7.6%);
+    justify-content: space-around;
+    padding: 80px 100px;
+}
+
+.about_information {
+    max-width: 430px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.about_title {
+    font: 400 35px 'Georgia';
+    line-height: 2.8rem;
+    letter-spacing: 0.19rem;
+    color: #545454;
+}
+
+.about_information__text {
+    font: 400 15px 'Arial', sans-serif;
+    line-height: 1.5rem;
+    color: #4C4C4C;
+}
