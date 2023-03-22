@@ -131,7 +131,8 @@ h1 {
 
 .about_title,
 .our_friends__title,
-.help_title {
+.help_title,
+.in_addition_title {
     font: 400 35px 'Georgia';
     line-height: 2.8rem;
     letter-spacing: 0.19rem;
@@ -238,6 +239,7 @@ h1 {
 .help_wrapper {
     width: 1026px;
     height: 281px;
+    margin-bottom: 100px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
 }
@@ -307,4 +309,61 @@ h1 {
     font: 400 20px 'Georgia';
     letter-spacing: 0.06rem;
     color: #545454;
+}
+
+/*--Section "In addition"--*/
+
+.in_addition {
+    background-color: #F6F6F6;
+}
+
+.in_addition_wrapper {
+    max-width: 915px;
+    margin: 81px auto 100px;
+    display: flex;
+    gap: 30px;
+}
+
+.in_addition_info {
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.in_addition_img {
+    margin: 11px 0;
+}
+
+.bank_info {
+    font: 400 15px 'Georgia';
+    color: #545454;
+}
+
+.credit_card {
+    width: 349px;
+    height: 43px;
+    border-radius: 9px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px;
+    align-items: center;
+    background-color: #F1CDB3;
+}
+
+.credit_card img {
+    width: 30px;
+    height: 23px;
+}
+
+.card_number {
+    font: 400 20px 'Georgia';
+    color:#545454;
+    letter-spacing: 0.06rem;
+}
+
+.text_info {
+    font: italic 400 12px 'Arial', sans-serif;
+    color:#B2B2B2;
+    line-height: 1.1rem;
 }
