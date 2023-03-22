@@ -137,6 +137,7 @@ h1 {
     line-height: 2.8rem;
     letter-spacing: 0.19rem;
     color: #545454;
+    word-wrap: break-word;
 }
 
 .about_information__text {
@@ -317,6 +318,10 @@ h1 {
     background-color: #F6F6F6;
 }
 
+.in_addition_title {
+    letter-spacing: 0.06em;
+}
+
 .in_addition_wrapper {
     max-width: 915px;
     margin: 81px auto 100px;
@@ -338,6 +343,7 @@ h1 {
 .bank_info {
     font: 400 15px 'Georgia';
     color: #545454;
+    letter-spacing: 0.06em;
 }
 
 .credit_card {
@@ -359,11 +365,75 @@ h1 {
 .card_number {
     font: 400 20px 'Georgia';
     color:#545454;
-    letter-spacing: 0.06rem;
+    letter-spacing: 0.055em;
 }
 
 .text_info {
     font: italic 400 12px 'Arial', sans-serif;
     color:#B2B2B2;
     line-height: 1.1rem;
+}
+
+/*--Footer--*/
+
+footer {
+    background: url('./assets/img/footer-background.png'), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #5B483A 0.01%, #574538 8.33%, #544337 13.54%, #4F4035 22.92%, #483B33 35.42%, #433730 46.35%, #3D332E 57.81%, #362F2B 70.83%, #2E2928 85.42%, #262425 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+footer h2 {
+    margin-top: -6px;
+    font: 400 35px 'Georgia';
+    color: #FFFFFF;
+    letter-spacing: 0.06em;
+    line-height: 45px;
+    word-wrap: break-word;
+}
+
+.address h2 {
+    margin-top: -3px;
+}
+
+footer p {
+    font: 400 20px 'Georgia';
+    color: #F1CDB3;
+    letter-spacing: 0.06em;
+}
+
+.contacts {
+    max-width: 279px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.address {
+    max-width: 302px;
+    height: 234px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contacts_item,
+.address_item {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.address_item {
+    margin-bottom: 2px;
+}
+
+.footer_img {
+    margin-top: 40px;
+}
+
+footer a {
+    text-decoration: none;
+    font: 400 20px 'Georgia';
+    color: #F1CDB3;
+    letter-spacing: 0.06em;
 }
