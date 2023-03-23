@@ -57,6 +57,7 @@ header {
 }
 
 .shelter_list a {
+    padding-bottom: 3px;
     text-decoration: none;
     font: 400 15px 'Arial', sans-serif;
     color: #CDCDCD;
