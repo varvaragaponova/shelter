@@ -62,7 +62,7 @@ header {
     color: #CDCDCD;
 }
 
-.shelter_list .shelter_item:first-child {
+.shelter_list .shelter_item:first-child a {
     border-bottom: solid 3px #F1CDB3;
     color: #FAFAFA;
 }
@@ -112,6 +112,7 @@ h1 {
     color: #292929;
     font: 400 17px 'Georgia';
     letter-spacing: 0.063rem;
+    transition: all 0.3s;
 }
 
 /*--Section "About"--*/
@@ -170,6 +171,7 @@ h1 {
     height: 52px;
     border-radius: 100%;
     border: 2px solid #F1CDB3;
+    transition: all 0.5s;
 }
 
 .slider_wrapper {
@@ -217,6 +219,7 @@ h1 {
     color: #292929;
     background-color: #FAFAFA;
     letter-spacing: 0.06rem;
+    transition: all 0.5s;
 }
 
 .get_to {
@@ -229,6 +232,7 @@ h1 {
     font: 400 17px 'Georgia';
     color: #292929;
     letter-spacing: 0.06rem;
+    transition: all 0.5s;
 }
 
 /*--Section "Helt"--*/
@@ -436,4 +440,49 @@ footer a {
     font: 400 20px 'Georgia';
     color: #F1CDB3;
     letter-spacing: 0.06em;
+}
+
+/*--HOOVER AND ACTIVE--*/
+
+.not_only__button:hover {
+    cursor: pointer;
+    background-color: #FDDCC4;
+    transition: all 0.3s;
+}
+
+.img_prev:hover,
+.img_next:hover {
+    cursor: pointer;
+    border: #FDDCC4;
+    background-color: #FDDCC4;
+    transition: all 0.5s;
+}
+
+.get_to:hover {
+    cursor: pointer;
+    background-color: #FDDCC4;
+    transition: all 0.5s;
+}
+
+.shelter_item a:active {
+    border-bottom: 3px solid #F1CDB3;
+    color: #FFFFFF;
+}
+
+.shelter_item a:hover {
+    cursor: pointer;
+    color: #FFFFFF;
+}
+
+.pet_info:hover {
+    cursor: pointer;
+    background-color: #FFFFFF;
+    transition: all 0.5s;
+}
+
+.pet_info:hover .pet_more {
+    cursor: pointer;
+    background-color: #FDDCC4;
+    border: #FDDCC4;
+    transition: all 0.5s;
 }
