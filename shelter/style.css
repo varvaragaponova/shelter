@@ -112,23 +112,19 @@ h1 {
 }
 
 .not_only__button {
+    display: inline-block;
     width: 207px;
     height: 52px;
+    padding-top: 14px;
+    text-align: center;
     border-radius: 100px;
     border: none;
-    background-color: #F1CDB3;
-    transition: all 0.3s;
-}
-
-.not_only__button a {
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    padding: 14px;
     text-decoration: none;
     color: #292929;
     font: 400 17px 'Georgia';
     letter-spacing: 0.063rem;
+    background-color: #F1CDB3;
+    transition: all 0.3s;
 }
 
 /*--Section "About"--*/
@@ -241,27 +237,23 @@ h1 {
 }
 
 .get_to {
+    display: inline-block;
     width: 261px;
     height: 52px;
     margin: 60px 0 100px;
+    padding: 18px;
     border: none;
     border-radius: 100px;
     background-color: #F1CDB3;
-}
-
-.get_to a {
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    padding: 18px;
     font: 400 17px 'Georgia';
+    text-align: center;
     color: #292929;
     letter-spacing: 0.06rem;
     transition: all 0.5s;
     text-decoration: none;
 }
 
-/*--Section "Helt"--*/
+/*--Section "Help"--*/
 
 .help .content_container {
     flex-direction: column;
