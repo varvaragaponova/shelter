@@ -61,6 +61,11 @@ header {
     letter-spacing: 0.094rem;
 }
 
+.logo a {
+    display: block;
+    text-decoration: none;
+}
+
 .logo_title {
     margin-bottom: 8px;
     font: 400 32px 'Georgia';
@@ -170,14 +175,10 @@ h1 {
 .slider_btn__wrapper button {
     width: 52px;
     border-radius: 100px;
+    border: 2px solid #F1CDB3;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.btn_prev,
-.prev {
-    border: 2px solid #CDCDCD;
 }
 
 .now {
@@ -188,9 +189,13 @@ h1 {
     line-height: 0.06em;
 }
 
-.next,
-.btn_next {
-    border: 2px solid #F1CDB3;
+.prev[disabled=disabled] {
+    border: 2px solid#CDCDCD;
+    pointer-events: none;
+}
+
+.prev[disabled=disabled] svg path {
+    fill: #CDCDCD;
 }
 
 /*--Footer--*/
@@ -255,4 +260,43 @@ footer a {
     font: 400 20px 'Georgia';
     color: #F1CDB3;
     letter-spacing: 0.06em;
+}
+
+/*--HOOVER AND ACTIVE--*/
+
+.slider_btn__wrapper button:hover {
+    cursor: pointer;
+    border: #FDDCC4;
+    background-color: #FDDCC4;
+    transition: all 0.5s;
+}
+
+.get_to:hover {
+    cursor: pointer;
+    background-color: #FDDCC4;
+    transition: all 0.5s;
+}
+
+.shelter_item a:active {
+    border-bottom: 3px solid #F1CDB3;
+    color: #FFFFFF;
+}
+
+.shelter_item a:hover {
+    cursor: pointer;
+    color: #FFFFFF;
+    transition: all 0.5s;
+}
+
+.pet_info:hover {
+    cursor: pointer;
+    background-color: #FFFFFF;
+    transition: all 0.5s;
+}
+
+.pet_info:hover .pet_more {
+    cursor: pointer;
+    background-color: #FDDCC4;
+    border: #FDDCC4;
+    transition: all 0.5s;
 }

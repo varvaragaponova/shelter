@@ -48,6 +48,11 @@ header {
     color: #FFFFFF
 }
 
+.logo a {
+    display: block;
+    text-decoration: none;
+}
+
 .shelter_list {
     display: flex;
     justify-content: space-between;
@@ -61,6 +66,7 @@ header {
     text-decoration: none;
     font: 400 15px 'Arial', sans-serif;
     color: #CDCDCD;
+    transition: all 0.5s;
 }
 
 .shelter_list .shelter_item:first-child a {
@@ -111,10 +117,18 @@ h1 {
     border-radius: 100px;
     border: none;
     background-color: #F1CDB3;
+    transition: all 0.3s;
+}
+
+.not_only__button a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding: 14px;
+    text-decoration: none;
     color: #292929;
     font: 400 17px 'Georgia';
     letter-spacing: 0.063rem;
-    transition: all 0.3s;
 }
 
 /*--Section "About"--*/
@@ -233,10 +247,18 @@ h1 {
     border: none;
     border-radius: 100px;
     background-color: #F1CDB3;
+}
+
+.get_to a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding: 18px;
     font: 400 17px 'Georgia';
     color: #292929;
     letter-spacing: 0.06rem;
     transition: all 0.5s;
+    text-decoration: none;
 }
 
 /*--Section "Helt"--*/
@@ -371,6 +393,8 @@ h1 {
 }
 
 .card_number {
+    display: inline-block;
+    text-decoration: none;
     font: 400 20px 'Georgia';
     color:#545454;
     letter-spacing: 0.055em;
@@ -444,6 +468,7 @@ footer a {
     font: 400 20px 'Georgia';
     color: #F1CDB3;
     letter-spacing: 0.06em;
+    transition: all 0.2s;
 }
 
 /*--HOOVER AND ACTIVE--*/
@@ -451,6 +476,11 @@ footer a {
 .not_only__button:hover {
     cursor: pointer;
     background-color: #FDDCC4;
+    transition: all 0.3s;
+}
+
+.not_only__button:active {
+    box-shadow: 0 5px 5px rgba(156, 156, 156, 0.5);
     transition: all 0.3s;
 }
 
@@ -476,6 +506,7 @@ footer a {
 .shelter_item a:hover {
     cursor: pointer;
     color: #FFFFFF;
+    transition: all 0.5s;
 }
 
 .pet_info:hover {
@@ -489,4 +520,14 @@ footer a {
     background-color: #FDDCC4;
     border: #FDDCC4;
     transition: all 0.5s;
+}
+
+.card_number:hover {
+    color: #292929;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    transition: all 0.2s;
 }
