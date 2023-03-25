@@ -85,11 +85,16 @@ header {
     list-style: none;
 }
 
+.shelter_item:nth-child(2) {
+    pointer-events: none;
+}
+
 .shelter_list a {
     text-decoration: none;
     font: 400 15px 'Arial', sans-serif;
     color: #545454;
     padding-bottom: 3px;
+    transition: all 0.03s;
 }
 
 .shelter_list .shelter_item:nth-child(2) a {
@@ -133,6 +138,7 @@ h1 {
     justify-content: center;
     background-color: #FAFAFA;
     margin-bottom: 30px;
+    transition: all 0.05s;
 }
 
 .pet_info__name {
@@ -207,7 +213,6 @@ footer {
 }
 
 footer h2 {
-    margin-top: -6px;
     font: 400 35px 'Georgia';
     color: #FFFFFF;
     letter-spacing: 0.06em;
@@ -229,7 +234,7 @@ footer p {
     max-width: 279px;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 37px;
 }
 
 .address {
@@ -248,7 +253,7 @@ footer p {
 }
 
 .address_item {
-    margin-bottom: 2px;
+    margin-bottom: -2px;
 }
 
 .footer_img {
@@ -260,6 +265,7 @@ footer a {
     font: 400 20px 'Georgia';
     color: #F1CDB3;
     letter-spacing: 0.06em;
+    transition: all 0.2s;
 }
 
 /*--HOOVER AND ACTIVE--*/
@@ -277,20 +283,25 @@ footer a {
     transition: all 0.5s;
 }
 
-.shelter_item a:active {
+.shelter_item:active {
     border-bottom: 3px solid #F1CDB3;
-    color: #FFFFFF;
+    transition: all 0.02s;
 }
 
-.shelter_item a:hover {
+.shelter_item:active a {
+    color: #545454;
+}
+
+.shelter_item:hover a {
     cursor: pointer;
-    color: #FFFFFF;
     transition: all 0.5s;
+    color: #292929;
 }
 
 .pet_info:hover {
     cursor: pointer;
     background-color: #FFFFFF;
+    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
     transition: all 0.5s;
 }
 
@@ -298,5 +309,15 @@ footer a {
     cursor: pointer;
     background-color: #FDDCC4;
     border: #FDDCC4;
+    transition: all 0.5s;
+}
+
+.pet_info .pet_more:active {
+    box-shadow: 0 5px 5px rgba(156, 156, 156, 0.5);
+    transition: all 0.5s;
+}
+
+footer a:hover {
+    text-decoration: underline;
     transition: all 0.5s;
 }
