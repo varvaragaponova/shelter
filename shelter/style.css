@@ -499,10 +499,10 @@ footer a {
     color: #FFFFFF;
 }
 
-.shelter_item a:hover {
+.shelter_item:hover a {
     cursor: pointer;
     color: #FFFFFF;
-    transition: all 0.5s;
+    transition: color 0.5s;
 }
 
 .pet_info:hover {

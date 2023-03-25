@@ -185,6 +185,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all 0.5s;
 }
 
 .now {
@@ -193,6 +194,7 @@ h1 {
     color: #292929;
     border: none;
     line-height: 0.06em;
+    transition: all 0.5s;
 }
 
 .prev[disabled=disabled] {
@@ -294,7 +296,7 @@ footer a {
 
 .shelter_item:hover a {
     cursor: pointer;
-    transition: all 0.5s;
+    transition: color 0.5s;
     color: #292929;
 }
 
