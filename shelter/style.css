@@ -132,7 +132,7 @@ h1 {
 .about .content_container {
     width: 1200px;
     justify-content: space-around;
-    padding: 80px 114px 99px;
+    padding: 80px 114px 100px;
 }
 
 .about_information {
@@ -348,7 +348,7 @@ h1 {
 
 .in_addition_wrapper {
     max-width: 915px;
-    margin: 81px auto 100px;
+    margin: 81px auto 99px;
     display: flex;
     gap: 30px;
 }
