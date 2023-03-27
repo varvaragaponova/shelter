@@ -189,7 +189,7 @@ h1 {
     transition: all 0.5s;
 }
 
-.now {
+.slider_btn__wrapper .now {
     font: 400 20px 'Georgia';
     background-color: #F1CDB3;
     color: #292929;
