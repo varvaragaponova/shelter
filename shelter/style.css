@@ -21,7 +21,7 @@ header {
     position: relative;
     background: transparent;
     width: 100%;
-    padding: 60px 0;
+    padding: 30px 0 90px;
     background-repeat: no-repeat;
 }
 
@@ -44,8 +44,9 @@ header {
 }
 
 .logo_subtitle {
+    padding-left: 4px;
     font: 400 13px 'Arial', sans-serif;
-    color: #FFFFFF
+    color: #FFFFFF;
 }
 
 .logo a {
@@ -57,6 +58,7 @@ header {
     display: flex;
     justify-content: space-between;
     gap: 35px;
+    margin-top: -4px;
     align-items: center;
     list-style: none;
 }
@@ -95,7 +97,7 @@ header {
 }
 
 .not_only__img {
-    margin-top: 185px;
+    margin-top: 187px;
 }
 
 h1 {
@@ -417,7 +419,7 @@ footer h2 {
 }
 
 .address h2 {
-    margin-top: -3px;
+    margin-top: -1px;
 }
 
 footer p {
