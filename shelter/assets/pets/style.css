@@ -70,17 +70,20 @@ header {
     margin-bottom: 8px;
     font: 400 32px 'Georgia';
     color: #545454;
+    letter-spacing: 0.06em;
 }
 
 .logo_subtitle {
+    padding-left: 4px;
     font: 400 13px 'Arial', sans-serif;
     color: #292929;
+    letter-spacing: 0.11em;
 }
 
 .shelter_list {
     display: flex;
     justify-content: space-between;
-    gap: 35px;
+    gap: 36px;
     align-items: center;
     list-style: none;
 }
@@ -107,6 +110,7 @@ header {
 .our_friends .content_container {
     flex-direction: column;
     max-width: 1200px;
+    padding-top: 80px;
 }
 
 .our_friends {
@@ -117,12 +121,12 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding-top: 14px;
+    /* padding-top: 14px; */
 }
 
 h1 {
     max-width: 400px;
-    margin: 80px 0 45px;
+    margin: 0 0 60px;
     font: 400 35px 'Georgia';
     text-align: center;
     color: #545454;
@@ -173,7 +177,7 @@ h1 {
     width: 340px;
     height: 52px;
     margin-top: 30px;
-    margin-bottom: 103px;
+    margin-bottom: 100px;
     display: flex;
     justify-content: space-between;
 }
