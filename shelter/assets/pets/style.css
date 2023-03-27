@@ -173,7 +173,7 @@ h1 {
     width: 340px;
     height: 52px;
     margin-top: 30px;
-    margin-bottom: 100px;
+    margin-bottom: 103px;
     display: flex;
     justify-content: space-between;
 }
@@ -255,9 +255,9 @@ footer p {
     align-items: center;
 }
 
-.address_item {
+/* .address_item {
     margin-bottom: -2px;
-}
+} */
 
 .footer_img {
     margin-top: 40px;
