@@ -41,12 +41,14 @@ header {
     margin-bottom: 8px;
     font: 400 32px 'Georgia';
     color: #F1CDB3;
+    letter-spacing: 0.06em;
 }
 
 .logo_subtitle {
     padding-left: 4px;
     font: 400 13px 'Arial', sans-serif;
     color: #FFFFFF;
+    letter-spacing: 0.1em;
 }
 
 .logo a {
@@ -57,7 +59,7 @@ header {
 .shelter_list {
     display: flex;
     justify-content: space-between;
-    gap: 35px;
+    gap: 36px;
     margin-top: -4px;
     align-items: center;
     list-style: none;
@@ -176,7 +178,7 @@ h1 {
     max-width: 400px;
     margin: 80px 0 60px;
     text-align: center;
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.12rem;
 }
 
 .img_prev,
@@ -191,6 +193,7 @@ h1 {
 
 .slider_wrapper {
     width: 100%;
+    margin-bottom: 58px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -214,15 +217,16 @@ h1 {
 }
 
 .pet_info__name {
-    margin: 26px 0 31px;
+    margin-bottom: 31px;
     font: 400 20px 'Georgia';
     color: #545454;
-    letter-spacing: 0.05rem;
+    letter-spacing: 0.06rem;
 }
 
 .our_pet {
     width: 270px;
     height: 270px;
+    margin-bottom: 25px;
     border-top-left-radius: 9px;
     border-top-right-radius: 9px;
 }
@@ -244,7 +248,7 @@ h1 {
     display: inline-block;
     width: 261px;
     height: 52px;
-    margin: 60px 0 100px;
+    margin-bottom: 102px;
     padding: 18px;
     border: none;
     border-radius: 100px;
