@@ -268,53 +268,13 @@ h1 {
 }
 
 .help_wrapper {
-    width: 1026px;
-    height: 281px;
+    max-width: 1026px;
     margin-bottom: 100px;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-}
-
-.help_wrapper .how_help:nth-child(-n+2) {
-    justify-self: start;
-    align-self: self-start;
-}
-
-.help_wrapper .how_help:nth-child(3),
-.help_wrapper .how_help:nth-child(4) {
-    justify-self: center;
-    align-self: self-start;
-}
-
-.help_wrapper .how_help:nth-child(3) {
-    margin-left: -19px;
-}
-
-.help_wrapper .how_help:nth-child(4) {
-    margin-right: -20px;
-}
-
-.help_wrapper .how_help:nth-child(6) {
-    margin-right: 33px;
-}
-
-.help_wrapper .how_help:nth-child(7) {
-    margin-right: 17px;
-}
-
-.help_wrapper .how_help:nth-child(5) {
-    justify-self: end;
-    align-self: self-start;
-}
-
-.help_wrapper .how_help:nth-child(8) {
-    justify-self: end;
-    align-self: self-end;
-    margin-right: -61px;
-}
-
-.help_wrapper .how_help:nth-child(9) {
-    margin-right: -120px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 120px;
+    row-gap: 55px;
 }
 
 .help_title {
@@ -328,8 +288,6 @@ h1 {
     max-width: 165px;
     height: 113px;
     text-align: center;
-    justify-self: end;
-    align-self: self-end;
 }
 
 .how_help img {
