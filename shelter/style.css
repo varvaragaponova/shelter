@@ -521,4 +521,26 @@ footer a {
         max-width: 768px;
         padding: 0 30px;
     }
+
+    /*Not only*/
+    .not_only .content_container {
+        padding: 0 30px;
+        margin: 0 auto;
+        flex-direction: column;
+    }
+
+    .not_only__wrapper {
+        margin-top: 155px;
+    }
+
+    .not_only__button {
+        margin: 0 auto;
+    }
+
+    .not_only__img {
+        width: 569px;
+        height: auto;
+        margin-top: 100px;
+        margin-left: auto;
+    }
 }
