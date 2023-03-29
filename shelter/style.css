@@ -26,11 +26,11 @@ header {
 }
 
 .content_container {
-    max-width: 1200px;
+    max-width: 1280px;
+    padding: 0 40px;
     display: flex;
     margin: 0 auto;
     justify-content: space-between;
-    flex-wrap: wrap;
     align-items: center;
 }
 
@@ -104,6 +104,9 @@ header {
 }
 
 .not_only__img {
+    width: 58%;
+    min-width: 569px;
+    height: auto;
     margin-top: 187px;
 }
 
@@ -509,3 +512,13 @@ footer a {
     }
 }
 
+@media screen and (max-width: 1023.8px) and (min-width: 769px) {
+}
+
+@media screen and (width: 768px) {
+    /*HEADER*/
+    .content_container {
+        max-width: 768px;
+        padding: 0 30px;
+    }
+}
