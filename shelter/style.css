@@ -540,7 +540,7 @@ footer a {
     .not_only__img {
         width: 569px;
         height: auto;
-        margin-top: 100px;
+        margin-top: 99px;
         margin-left: auto;
     }
 
@@ -576,10 +576,10 @@ footer a {
         width: 170px;
     }
 
-    /*In additional*/
+    /*In addition*/
     .in_addition_wrapper {
         max-width: 505px;
-        padding: 81px 0 99px;
+        padding: 81px 0 101px;
         margin: 0 auto;
     }
 
@@ -591,5 +591,17 @@ footer a {
     .in_addition_info {
         order: 1;
         margin: 0 auto 30px;
+    }
+
+    /*Footer*/
+    footer .content_container {
+        max-width: 708px;
+        padding: 0 34px;
+        margin-top: 32px;
+        flex-wrap: wrap;
+    }
+
+    .footer_img {
+        margin: 61px auto 0;
     }
 }
