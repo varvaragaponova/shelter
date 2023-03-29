@@ -575,4 +575,21 @@ footer a {
     .how_help {
         width: 170px;
     }
+
+    /*In additional*/
+    .in_addition_wrapper {
+        max-width: 505px;
+        padding: 81px 0 99px;
+        margin: 0 auto;
+    }
+
+    .in_addition_img {
+        margin: 0;
+        order: 2;
+    }
+
+    .in_addition_info {
+        order: 1;
+        margin: 0 auto 30px;
+    }
 }
