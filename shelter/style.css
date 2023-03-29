@@ -561,6 +561,18 @@ footer a {
     /*Our friends*/
     .pet_cards {
         max-width: 580px;
+        margin-bottom: 2px;
         gap: 40px;
+    }
+
+    /*Help*/
+    .help_wrapper {
+        width: 630px;
+        column-gap: 65px;
+        row-gap: 55px;
+    }
+
+    .how_help {
+        width: 170px;
     }
 }
