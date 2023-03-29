@@ -26,10 +26,11 @@ header {
 }
 
 .content_container {
-    width: 1200px;
+    max-width: 1200px;
     display: flex;
     margin: 0 auto;
     justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
 }
 
@@ -90,6 +91,10 @@ header {
     background-size: cover;
 }
 
+.not_only .content_container {
+    width: 100%;
+}
+
 .not_only__wrapper {
     max-width: 460px;
     margin-top: 108px;
@@ -134,7 +139,7 @@ h1 {
 /*--Section "About"--*/
 
 .about .content_container {
-    width: 1200px;
+    max-width: 1200px;
     justify-content: space-around;
     padding: 80px 114px 100px;
 }
@@ -314,6 +319,7 @@ h1 {
     max-width: 915px;
     margin: 81px auto 99px;
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
 }
 
@@ -430,72 +436,76 @@ footer a {
 
 /*--HOOVER AND ACTIVE--*/
 
-.not_only__button:hover {
-    cursor: pointer;
-    background-color: #FDDCC4;
-    transition: all 0.3s;
+@media (any-hover: hover) {
+
+    .not_only__button:hover {
+        cursor: pointer;
+        background-color: #FDDCC4;
+        transition: all 0.3s;
+    }
+
+    .not_only__button:active {
+        box-shadow: 0 5px 5px rgba(156, 156, 156, 0.5);
+        transition: all 0.3s;
+    }
+
+    .img_prev:hover,
+    .img_next:hover {
+        cursor: pointer;
+        border: #FDDCC4;
+        background-color: #FDDCC4;
+        transition: all 0.5s;
+    }
+
+    .get_to:hover {
+        cursor: pointer;
+        background-color: #FDDCC4;
+        transition: all 0.5s;
+    }
+
+    .get_to:active {
+        box-shadow: 0 5px 5px rgba(156, 156, 156, 0.5);
+    }
+
+    .shelter_item a:active {
+        border-bottom: 3px solid #F1CDB3;
+        color: #FFFFFF;
+    }
+
+    .shelter_item:hover a {
+        cursor: pointer;
+        color: #FFFFFF;
+        transition: color 0.5s;
+    }
+
+    .pet_info:hover {
+        cursor: pointer;
+        background-color: #FFFFFF;
+        transition: all 0.5s;
+        box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+    }
+
+    .pet_info .pet_more:active {
+        box-shadow: 0 5px 5px rgba(156, 156, 156, 0.5);
+        transition: all 0.5s;
+    }
+
+    .pet_info:hover .pet_more {
+        cursor: pointer;
+        background-color: #FDDCC4;
+        border: #FDDCC4;
+        transition: all 0.5s;
+    }
+
+    .card_number:hover {
+        color: #292929;
+        text-decoration: underline;
+    }
+
+    footer a:hover {
+        text-decoration: underline;
+        font-size: 20.5px;
+        transition: all 0.2s;
+    }
 }
 
-.not_only__button:active {
-    box-shadow: 0 5px 5px rgba(156, 156, 156, 0.5);
-    transition: all 0.3s;
-}
-
-.img_prev:hover,
-.img_next:hover {
-    cursor: pointer;
-    border: #FDDCC4;
-    background-color: #FDDCC4;
-    transition: all 0.5s;
-}
-
-.get_to:hover {
-    cursor: pointer;
-    background-color: #FDDCC4;
-    transition: all 0.5s;
-}
-
-.get_to:active {
-    box-shadow: 0 5px 5px rgba(156, 156, 156, 0.5);
-}
-
-.shelter_item a:active {
-    border-bottom: 3px solid #F1CDB3;
-    color: #FFFFFF;
-}
-
-.shelter_item:hover a {
-    cursor: pointer;
-    color: #FFFFFF;
-    transition: color 0.5s;
-}
-
-.pet_info:hover {
-    cursor: pointer;
-    background-color: #FFFFFF;
-    transition: all 0.5s;
-    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
-}
-
-.pet_info .pet_more:active {
-    box-shadow: 0 5px 5px rgba(156, 156, 156, 0.5);
-    transition: all 0.5s;
-}
-
-.pet_info:hover .pet_more {
-    cursor: pointer;
-    background-color: #FDDCC4;
-    border: #FDDCC4;
-    transition: all 0.5s;
-}
-
-.card_number:hover {
-    color: #292929;
-    text-decoration: underline;
-}
-
-footer a:hover {
-    text-decoration: underline;
-    font-size: 20.5px;
-    transition: all 0.2s;
-}
