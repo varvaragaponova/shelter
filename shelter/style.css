@@ -543,4 +543,18 @@ footer a {
         margin-top: 100px;
         margin-left: auto;
     }
+
+    /*About*/
+    .about .content_container {
+        flex-wrap: wrap;
+    }
+
+    .about_information {
+        order: 1;
+    }
+
+    .about_img {
+        order: 2;
+        margin-bottom: 82px;
+    }
 }
