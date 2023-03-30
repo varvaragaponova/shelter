@@ -339,4 +339,19 @@ footer a {
         max-width: 768px;
         padding: 0 30px;
     }
+
+    /*Our pets*/
+    .pets_card__wrapper {
+        max-width: 580px;
+        max-height: 1365px;
+        overflow: hidden;
+    }
+
+    h1 {
+        margin: 0 0 28px;
+    }
+
+    .slider_btn__wrapper {
+        margin: 40px 0 76px;
+    }
 }
