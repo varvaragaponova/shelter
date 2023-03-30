@@ -697,4 +697,34 @@ footer a {
         min-width: 260px;
         margin-top: 6.6rem;
     }
+
+    /*About*/
+    .about .content_container {
+        padding: 32px 25px 0px;
+    }
+
+    .about_img {
+        order: 2;
+        width: 260px;
+        height: 353.6px;
+    }
+
+    .about_title {
+        font-size: 25px;
+        line-height: 2rem;
+        letter-spacing: 0.06em;
+        text-align: center;
+    }
+
+    .about_information {
+        order: 1;
+        padding-top: 11px;
+        margin-bottom: 40px;
+        letter-spacing: 0;
+        gap: 23px;
+    }
+
+    .about_information__text {
+        text-align: justify;
+    }
 }
