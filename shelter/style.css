@@ -516,7 +516,19 @@ footer a {
     }
 }
 
-@media screen and (max-width: 1023.8px) and (min-width: 769px) {
+@media screen and (max-width: 1023.8px) {
+
+    /*Header*/
+    .content_container {
+        max-width: 75rem;
+        padding: 0 1.8rem;
+        flex-wrap: wrap;
+    }
+
+    .not_only__img {
+        margin-left: auto;
+        margin-top: 11.6rem;
+    }
 }
 
 @media screen and (width: 768px) {
@@ -646,4 +658,43 @@ footer a {
       .burger_menu span:nth-child(3) {
         transform: translate(-2px, 9px);
       }
+}
+
+@media screen and (width: 320px) {
+
+    .content_container {
+        padding: 0 20px;
+    }
+
+    /*Not only*/
+
+    .not_only .content_container {
+        max-width: 300px;
+        padding: 0;
+    }
+
+    h1 {
+        max-width: 250px;
+        margin: 0 auto;
+        font-size: 25px;
+        text-align: center;
+        letter-spacing: 0.08rem;
+    }
+
+    .not_only__wrapper {
+        margin-top: 155px;
+    }
+
+    .information_text {
+        text-align: center;
+    }
+
+    .not_only__button {
+        margin: 0 auto;
+    }
+
+    .not_only__img {
+        min-width: 260px;
+        margin-top: 6.6rem;
+    }
 }
