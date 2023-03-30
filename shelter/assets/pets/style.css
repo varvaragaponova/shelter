@@ -354,4 +354,14 @@ footer a {
     .slider_btn__wrapper {
         margin: 40px 0 76px;
     }
+
+    /*Footer*/
+    footer .content_container {
+        flex-wrap: wrap;
+        padding: 32px 65px 0;
+    }
+
+    .footer_img {
+        margin: 62px auto 0;
+    }
 }
