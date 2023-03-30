@@ -727,4 +727,40 @@ footer a {
     .about_information__text {
         text-align: justify;
     }
+
+    /*Our pets*/
+    .our_friends__title {
+        font-size: 25px;
+        letter-spacing: 0.05em;
+        line-height: 1.35em;
+        margin-top: 83px;
+        margin-bottom: 40px;
+    }
+
+    .slider_wrapper {
+        width: 96%;
+        flex-wrap: wrap;
+        margin-bottom: 42px;
+        justify-content: space-around;
+    }
+
+    .img_prev {
+        order: 2;
+    }
+
+    .pet_cards {
+        order: 1;
+    }
+
+    .img_next {
+        order: 3;
+    }
+
+    .pet_info {
+        margin-bottom: 20px;
+    }
+
+    .get_to {
+        margin-bottom: 43px;
+    }
 }
