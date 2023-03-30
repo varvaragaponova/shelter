@@ -50,7 +50,8 @@ header {
 }
 
 .content_container {
-    width: 1200px;
+    max-width: 1280px;
+    padding: 0 40px;
     display: flex;
     margin: 0 auto;
     justify-content: space-between;
@@ -110,7 +111,7 @@ header {
 .our_friends .content_container {
     flex-direction: column;
     max-width: 1200px;
-    padding-top: 80px;
+    padding: 80px 0 0;
 }
 
 .our_friends {
@@ -121,7 +122,6 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    /* padding-top: 14px; */
 }
 
 h1 {
@@ -277,55 +277,66 @@ footer a {
 
 /*--HOOVER AND ACTIVE--*/
 
-.slider_btn__wrapper button:hover {
-    cursor: pointer;
-    border: #FDDCC4;
-    background-color: #FDDCC4;
-    transition: all 0.5s;
+@media (any-hover: hover) {
+    .slider_btn__wrapper button:hover {
+        cursor: pointer;
+        border: #FDDCC4;
+        background-color: #FDDCC4;
+        transition: all 0.5s;
+    }
+
+    .get_to:hover {
+        cursor: pointer;
+        background-color: #FDDCC4;
+        transition: all 0.5s;
+    }
+
+    .shelter_item:active {
+        border-bottom: 3px solid #F1CDB3;
+        transition: all 0.02s;
+    }
+
+    .shelter_item:active a {
+        color: #545454;
+    }
+
+    .shelter_item:hover a {
+        cursor: pointer;
+        transition: color 0.5s;
+        color: #292929;
+    }
+
+    .pet_info:hover {
+        cursor: pointer;
+        background-color: #FFFFFF;
+        box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+        transition: all 0.5s;
+    }
+
+    .pet_info:hover .pet_more {
+        cursor: pointer;
+        background-color: #FDDCC4;
+        border: #FDDCC4;
+        transition: all 0.5s;
+    }
+
+    .pet_info .pet_more:active {
+        box-shadow: 0 5px 5px rgba(156, 156, 156, 0.5);
+        transition: all 0.5s;
+    }
+
+    footer a:hover {
+        text-decoration: underline;
+        font-size: 20.5px;
+        transition: all 0.5s;
+    }
 }
 
-.get_to:hover {
-    cursor: pointer;
-    background-color: #FDDCC4;
-    transition: all 0.5s;
-}
+@media screen and (width: 768px) {
 
-.shelter_item:active {
-    border-bottom: 3px solid #F1CDB3;
-    transition: all 0.02s;
-}
-
-.shelter_item:active a {
-    color: #545454;
-}
-
-.shelter_item:hover a {
-    cursor: pointer;
-    transition: color 0.5s;
-    color: #292929;
-}
-
-.pet_info:hover {
-    cursor: pointer;
-    background-color: #FFFFFF;
-    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
-    transition: all 0.5s;
-}
-
-.pet_info:hover .pet_more {
-    cursor: pointer;
-    background-color: #FDDCC4;
-    border: #FDDCC4;
-    transition: all 0.5s;
-}
-
-.pet_info .pet_more:active {
-    box-shadow: 0 5px 5px rgba(156, 156, 156, 0.5);
-    transition: all 0.5s;
-}
-
-footer a:hover {
-    text-decoration: underline;
-    font-size: 20.5px;
-    transition: all 0.5s;
+    /*Header*/
+    header .content_container {
+        max-width: 768px;
+        padding: 0 30px;
+    }
 }
