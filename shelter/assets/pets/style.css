@@ -106,6 +106,9 @@ header {
     color: #292929;
 }
 
+.burger_menu {
+    display: none;
+}
 /*--SECTION "Our friends"--*/
 
 .our_friends .content_container {
@@ -364,4 +367,42 @@ footer a {
     .footer_img {
         margin: 62px auto 0;
     }
+}
+
+@media screen and (max-width: 767.8px) {
+
+    /*Header*/
+
+    .shelter_menu {
+        display: none;
+    }
+
+    .burger_menu {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 22px;
+        border: none;
+        background-color: transparent;
+    }
+
+    .burger_menu span {
+        position: absolute;
+        width: 30px;
+        height: 2px;
+        left: 2px;
+        background-color: #000;
+    }
+
+    .burger_menu span:nth-child(1) {
+        transform: translate(-2px, -11px);
+      }
+
+      .burger_menu span:nth-child(2) {
+        transform: translate(-2px, -1px);
+      }
+
+      .burger_menu span:nth-child(3) {
+        transform: translate(-2px, 9px);
+      }
 }
