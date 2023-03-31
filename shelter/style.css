@@ -624,6 +624,10 @@ footer a {
 
 @media screen and (max-width: 767.8px) {
 
+    .content_container {
+        width: 100%;
+    }
+
     /*Header*/
 
     .shelter_menu {
@@ -657,6 +661,12 @@ footer a {
 
       .burger_menu span:nth-child(3) {
         transform: translate(-2px, 9px);
+      }
+
+      /*In addition*/
+      .in_addition_img {
+        max-width: 100%;
+        min-width: 260px;
       }
 }
 
@@ -707,6 +717,7 @@ footer a {
         order: 2;
         width: 260px;
         height: 353.6px;
+        margin-bottom: 42px;
     }
 
     .about_title {
@@ -733,7 +744,7 @@ footer a {
         font-size: 25px;
         letter-spacing: 0.05em;
         line-height: 1.35em;
-        margin-top: 83px;
+        margin-top: 42px;
         margin-bottom: 40px;
     }
 
@@ -779,6 +790,7 @@ footer a {
 
     .help_wrapper {
         width: 290px;
+        margin-bottom: 15px;
         column-gap: 30px;
         justify-content: space-between;
         row-gap: 4px;
@@ -795,5 +807,52 @@ footer a {
 
     .help_text {
         font-size: 15px;
+    }
+
+    /*In addition*/
+
+    .in_addition .content_container {
+        width: 300px;
+        margin: 0;
+        padding: 0 20px;
+    }
+
+    .in_addition_wrapper {
+        margin-top: 42px;
+        margin-bottom: 40px;
+    }
+
+    .in_addition_info {
+        max-width: 300px;
+        gap: 23px;
+    }
+
+    .credit_card {
+        width: 281px;
+    }
+
+    .card_number {
+        font-size: 15px;
+    }
+
+    .bank_info {
+        text-align: center;
+        letter-spacing: 0;
+    }
+
+    .in_addition_img {
+        order: 2;
+        width: 260px;
+        margin: 12px auto;
+    }
+
+    .in_addition_title {
+        font-size: 25px;
+        text-align: center;
+        line-height: 130%;
+    }
+
+    .text_info {
+        text-align: justify;
     }
 }
