@@ -217,9 +217,8 @@ h1 {
 /*--Footer--*/
 
 footer {
-    background: url('../img/footer-background.png'), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #5B483A 0.01%, #574538 8.33%, #544337 13.54%, #4F4035 22.92%, #483B33 35.42%, #433730 46.35%, #3D332E 57.81%, #362F2B 70.83%, #2E2928 85.42%, #262425 100%);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: url('../img/noise_transparent@2x.png'), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #5B483A 0.01%, #574538 8.33%, #544337 13.54%, #4F4035 22.92%, #483B33 35.42%, #433730 46.35%, #3D332E 57.81%, #362F2B 70.83%, #2E2928 85.42%, #262425 100%);
+    background-repeat: inherit;
 }
 
 footer h2 {
@@ -261,10 +260,6 @@ footer p {
     gap: 20px;
     align-items: center;
 }
-
-/* .address_item {
-    margin-bottom: -2px;
-} */
 
 .footer_img {
     margin-top: 40px;
@@ -332,6 +327,16 @@ footer a {
         text-decoration: underline;
         font-size: 20.5px;
         transition: all 0.5s;
+    }
+}
+
+@media screen and (max-width: 1023.8px) {
+
+    /*Header*/
+    .content_container {
+        max-width: 75rem;
+        padding: 0 1.8rem;
+        flex-wrap: wrap;
     }
 }
 
@@ -412,7 +417,7 @@ footer a {
         padding: 0 20px;
     }
 
-    /*Our pets*/
+    /*Our friends*/
     .our_friends .content_container {
         padding: 42px 0 0;
     }
@@ -432,5 +437,38 @@ footer a {
     h1 {
         margin-bottom: 40px;
         font-size: 25px;
+    }
+
+    /*Footer*/
+    .contacts h2,
+    .address h2 {
+        font-size: 25px;
+        text-align: center;
+        line-height: 130%;
+    }
+
+    .contacts,
+    .address {
+        align-items: center;
+    }
+
+    .address {
+        justify-content: flex-start;
+        gap: 40px;
+    }
+
+    .contacts {
+        gap: 37px;
+        padding-top: 30px;
+        padding-bottom: 38px;
+    }
+
+    .address_item {
+        width: 107%;
+    }
+
+    .footer_img {
+        width: 260px;
+        margin: 28px auto 0;
     }
 }
