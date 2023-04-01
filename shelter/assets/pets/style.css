@@ -406,3 +406,31 @@ footer a {
         transform: translate(-2px, 9px);
       }
 }
+
+@media screen and (width: 320px) {
+    .content_container {
+        padding: 0 20px;
+    }
+
+    /*Our pets*/
+    .our_friends .content_container {
+        padding: 42px 0 0;
+    }
+
+    .pets_card__wrapper {
+        justify-content: center;
+        max-height: 1365px;
+        overflow: hidden;
+    }
+
+    .slider_btn__wrapper {
+        max-width: 300px;
+        margin-top: 44px;
+        margin-bottom: 42px;
+    }
+
+    h1 {
+        margin-bottom: 40px;
+        font-size: 25px;
+    }
+}
