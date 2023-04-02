@@ -527,11 +527,28 @@ footer a {
     }
 
     .pet_cards {
-        gap: 7%;
+        gap: 6%;
     }
 
     .about_img {
         order: 2;
+    }
+
+    .help_wrapper {
+        column-gap: 80px;
+    }
+
+    .how_help {
+        width: 165px;
+    }
+}
+
+@media screen and (max-width: 1180px) {
+    .pet_cards {
+        max-height: 435px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
     }
 }
 
@@ -719,26 +736,209 @@ footer a {
 
     .burger_menu span:nth-child(1) {
         transform: translate(-2px, -11px);
-      }
+    }
 
-      .burger_menu span:nth-child(2) {
+    .burger_menu span:nth-child(2) {
         transform: translate(-2px, -1px);
-      }
+    }
 
-      .burger_menu span:nth-child(3) {
+    .burger_menu span:nth-child(3) {
         transform: translate(-2px, 9px);
-      }
+    }
 
-      /*In addition*/
-      .in_addition_img {
+    /*In addition*/
+    .in_addition_img {
         max-width: 100%;
         min-width: 260px;
-      }
+    }
+
+    .how_help {
+        width: 130px;
+    }
 }
 
+@media screen and (max-width: 767.8px) /*and (min-width: 321px)*/ {
+    .content_container {
+        flex-wrap: wrap;
+    }
+
+    .not_only__wrapper {
+        max-width: 84%;
+        margin: 9rem auto 0;
+    }
+
+    .not_only__button {
+        margin: 0 auto;
+    }
+
+    .not_only__img {
+        min-width: 260px;
+        width: 80%;
+        margin-left: auto;
+        margin-top: 5.5rem;
+    }
+
+    .about .content_container {
+        padding: 50px 30px;
+    }
+
+    .about_information {
+        order: 1;
+    }
+
+    .about_img {
+        min-width: 260px;
+        width: 40%;
+        margin-top: 4rem;
+        order: 2;
+    }
+
+    .slider_wrapper {
+        gap: 2%;
+    }
+
+    .in_addition_info {
+        max-width: 55%;
+        margin: 0 auto;
+        order: 1;
+    }
+
+    .in_addition_img {
+        order: 2;
+        margin: 11px auto;
+    }
+
+    .credit_card {
+        width: 280px;
+    }
+
+    .credit_card a {
+        font-size: 15px;
+    }
+
+    .contacts h2,
+    .address h2 {
+        font-size: 25px;
+        text-align: center;
+        margin-top: 20px;
+        line-height: 130%;
+    }
+
+    .contacts,
+    .address {
+        margin: 0 auto;;
+    }
+
+    .address_item {
+        min-width: 280px;
+        margin-left: -10px;
+    }
+
+    .footer_img {
+        width: 100%;
+        max-width: 300px;
+        margin: 40px auto 0;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    h1,
+    .about_title,
+    .our_friends__title,
+    .help_title,
+    .in_addition_title {
+        font-size: 30px;
+    }
+
+    .help_wrapper {
+        column-gap: 50px;
+    }
+
+    .about .content_container {
+        padding: 30px;
+    }
+
+    .in_addition_info {
+        max-width: 70%;
+    }
+
+    .credit_card a {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 470px) {
+
+    h1,
+    .about_title,
+    .our_friends__title,
+    .help_title,
+    .in_addition_title {
+        font-size: 25px;
+        letter-spacing: 0.06em;
+        line-height: 130%;
+    }
+
+    .slider_wrapper {
+        width: 96%;
+        flex-wrap: wrap;
+        margin-bottom: 42px;
+        justify-content: space-around;
+    }
+
+    .img_prev {
+        order: 2;
+    }
+
+    .help_wrapper {
+        column-gap: 25px;
+    }
+
+    .pet_cards {
+        order: 1;
+    }
+
+    .img_next {
+        order: 3;
+    }
+
+    .pet_info {
+        margin-bottom: 20px;
+    }
+
+    .get_to {
+        margin-bottom: 43px;
+    }
+
+    .in_addition .content_container {
+        padding: 0 20px;
+    }
+
+    .in_addition_info {
+        margin: 0 auto;
+        max-width: 320px;
+    }
+
+    .credit_card {
+        width: 260px;
+        padding: 0 9px;
+    }
+}
+
+@media screen and (max-width: 365px) {
+    .help .content_container {
+        padding: 0 15px;
+    }
+
+    .pet_cards {
+        column-gap: 15px;
+        justify-content: space-between;
+    }
+}
 @media screen and (width: 320px) {
 
     .content_container {
+        flex-wrap: wrap;
         padding: 0 20px;
     }
 
@@ -772,6 +972,7 @@ footer a {
     .not_only__img {
         min-width: 260px;
         margin-top: 6.6rem;
+        margin-left: auto;
     }
 
     /*About*/
