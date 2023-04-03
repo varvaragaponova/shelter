@@ -948,6 +948,7 @@ footer a {
         justify-content: space-between;
     }
 }
+
 @media screen and (width: 320px) {
 
     .content_container {
@@ -1041,6 +1042,7 @@ footer a {
 
     .pet_cards {
         order: 1;
+        margin-bottom: 19px;
     }
 
     .img_next {
@@ -1053,6 +1055,7 @@ footer a {
 
     .get_to {
         margin-bottom: 43px;
+        padding: 17px;
     }
 
     /*Help*/
@@ -1062,7 +1065,7 @@ footer a {
 
     .help_title {
         max-width: 230px;
-        margin: 43px 0;
+        margin: 42px 0 44px;
         font-size: 25px;
         letter-spacing: 0.06em;
         line-height: 125%;
@@ -1087,6 +1090,7 @@ footer a {
 
     .help_text {
         font-size: 15px;
+        letter-spacing: 0.06rem;
     }
 
     /*In addition*/
@@ -1110,6 +1114,7 @@ footer a {
     .credit_card {
         width: 281px;
         padding: 3px 17px 0 15px;
+        margin-top: 1px;
     }
 
     .card_number {
