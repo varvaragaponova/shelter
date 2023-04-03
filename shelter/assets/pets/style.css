@@ -400,7 +400,7 @@ footer a {
     }
 }
 
-@media screen and (max-width: 454px) and(min-width: 321px) {
+@media screen and (max-width: 454px) and (min-width: 321px) {
 
     h1,
     .address h2,
@@ -409,7 +409,7 @@ footer a {
     }
 
     .slider_btn__wrapper {
-        max-width: 300px;
+        width: 300px;
     }
 
     footer .content_container {
@@ -575,6 +575,6 @@ footer a {
     }
 
     .slider_btn__wrapper {
-        max-width: 300px;
+        max-width: 280px;
     }
 }
