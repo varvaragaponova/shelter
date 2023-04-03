@@ -770,7 +770,7 @@ footer a {
     }
 }
 
-@media screen and (max-width: 767.8px) /*and (min-width: 321px)*/ {
+@media screen and (max-width: 767.8px) and (min-width: 321px) {
     .content_container {
         flex-wrap: wrap;
     }
