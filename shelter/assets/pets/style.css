@@ -424,6 +424,14 @@ footer a {
         padding: 0 30px;
     }
 
+    .logo_subtitle {
+        letter-spacing: 0.1em;
+    }
+
+    .shelter_list {
+        margin-bottom: 2px;
+    }
+
     /*Our pets*/
     .pets_card__wrapper {
         max-width: 580px;
@@ -512,7 +520,7 @@ footer a {
 
     .slider_btn__wrapper {
         max-width: 300px;
-        margin-top: 44px;
+        margin-top: 43px;
         margin-bottom: 42px;
     }
 
