@@ -26,7 +26,8 @@ header {
 }
 
 .content_container {
-    width: 1200px;
+    max-width: 1280px;
+    padding: 0 40px;
     display: flex;
     margin: 0 auto;
     justify-content: space-between;
@@ -79,15 +80,23 @@ header {
     pointer-events: none;
 }
 
+.burger_menu {
+    display: none;
+}
+
 /*---Section "Not only"---*/
 
 .not_only {
     display: flex;
     justify-content: space-around;
     margin-top: -185px;
-    background: url('./assets/img/start-screen-gradient-background.png'), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #5B483A 0.01%, #574538 8.33%, #544337 13.54%, #4F4035 22.92%, #483B33 35.42%, #433730 46.35%, #3D332E 57.81%, #362F2B 70.83%, #2E2928 85.42%, #262425 100%);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: url('./assets/img/noise_transparent@2x.png'), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #5B483A 0.01%, #574538 8.33%, #544337 13.54%, #4F4035 22.92%, #483B33 35.42%, #433730 46.35%, #3D332E 57.81%, #362F2B 70.83%, #2E2928 85.42%, #262425 100%);
+    background-repeat: inherit;
+    /* background-size: cover; */
+}
+
+.not_only .content_container {
+    width: 100%;
 }
 
 .not_only__wrapper {
@@ -99,6 +108,9 @@ header {
 }
 
 .not_only__img {
+    width: 58%;
+    min-width: 569px;
+    height: auto;
     margin-top: 187px;
 }
 
@@ -119,7 +131,7 @@ h1 {
     display: inline-block;
     width: 207px;
     height: 52px;
-    padding-top: 14px;
+    padding-top: 16px;
     text-align: center;
     border-radius: 100px;
     border: none;
@@ -134,7 +146,7 @@ h1 {
 /*--Section "About"--*/
 
 .about .content_container {
-    width: 1200px;
+    max-width: 1200px;
     justify-content: space-around;
     padding: 80px 114px 100px;
 }
@@ -143,7 +155,7 @@ h1 {
     max-width: 430px;
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 25px;
 }
 
 .about_title,
@@ -155,6 +167,11 @@ h1 {
     letter-spacing: 0.19rem;
     color: #545454;
     word-wrap: break-word;
+}
+
+.about_title {
+    letter-spacing: 0.06em;
+    max-width: 308px;
 }
 
 .about_information__text {
@@ -186,14 +203,27 @@ h1 {
     width: 52px;
     height: 52px;
     border-radius: 100%;
+    flex-shrink: 0;
     background-color: #F6F6F6;
     border: 2px solid #F1CDB3;
     transition: all 0.5s;
 }
 
+.img_prev {
+    order: 1;
+}
+
+.pet_cards {
+    order: 2;
+}
+
+.img_next {
+    order: 3;
+}
+
 .slider_wrapper {
     width: 100%;
-    margin-bottom: 58px;
+    margin-bottom: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -217,7 +247,7 @@ h1 {
 }
 
 .pet_info__name {
-    margin-bottom: 31px;
+    margin-bottom: 32px;
     font: 400 20px 'Georgia';
     color: #545454;
     letter-spacing: 0.06rem;
@@ -268,58 +298,18 @@ h1 {
 }
 
 .help_wrapper {
-    width: 1026px;
-    height: 281px;
+    max-width: 1026px;
     margin-bottom: 100px;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-}
-
-.help_wrapper .how_help:nth-child(-n+2) {
-    justify-self: start;
-    align-self: self-start;
-}
-
-.help_wrapper .how_help:nth-child(3),
-.help_wrapper .how_help:nth-child(4) {
-    justify-self: center;
-    align-self: self-start;
-}
-
-.help_wrapper .how_help:nth-child(3) {
-    margin-left: -19px;
-}
-
-.help_wrapper .how_help:nth-child(4) {
-    margin-right: -20px;
-}
-
-.help_wrapper .how_help:nth-child(6) {
-    margin-right: 33px;
-}
-
-.help_wrapper .how_help:nth-child(7) {
-    margin-right: 17px;
-}
-
-.help_wrapper .how_help:nth-child(5) {
-    justify-self: end;
-    align-self: self-start;
-}
-
-.help_wrapper .how_help:nth-child(8) {
-    justify-self: end;
-    align-self: self-end;
-    margin-right: -61px;
-}
-
-.help_wrapper .how_help:nth-child(9) {
-    margin-right: -120px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 120px;
+    row-gap: 55px;
 }
 
 .help_title {
     max-width: 308px;
-    margin: 80px 0 60px;
+    margin: 80px 0 59px;
     text-align: center;
     letter-spacing: 0.12rem;
 }
@@ -328,8 +318,6 @@ h1 {
     max-width: 165px;
     height: 113px;
     text-align: center;
-    justify-self: end;
-    align-self: self-end;
 }
 
 .how_help img {
@@ -338,7 +326,7 @@ h1 {
 
 .help_text {
     font: 400 20px 'Georgia';
-    letter-spacing: 0.06rem;
+    letter-spacing: 0.07rem;
     color: #545454;
 }
 
@@ -356,6 +344,7 @@ h1 {
     max-width: 915px;
     margin: 81px auto 99px;
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
 }
 
@@ -409,9 +398,8 @@ h1 {
 /*--Footer--*/
 
 footer {
-    background: url('./assets/img/footer-background.png'), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #5B483A 0.01%, #574538 8.33%, #544337 13.54%, #4F4035 22.92%, #483B33 35.42%, #433730 46.35%, #3D332E 57.81%, #362F2B 70.83%, #2E2928 85.42%, #262425 100%);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: url('./assets/img/noise_transparent@2x.png'), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #5B483A 0.01%, #574538 8.33%, #544337 13.54%, #4F4035 22.92%, #483B33 35.42%, #433730 46.35%, #3D332E 57.81%, #362F2B 70.83%, #2E2928 85.42%, #262425 100%);
+    background-repeat: inherit;
 }
 
 footer h2 {
@@ -472,72 +460,834 @@ footer a {
 
 /*--HOOVER AND ACTIVE--*/
 
-.not_only__button:hover {
-    cursor: pointer;
-    background-color: #FDDCC4;
-    transition: all 0.3s;
+@media (any-hover: hover) {
+
+    .not_only__button:hover {
+        cursor: pointer;
+        background-color: #FDDCC4;
+        transition: all 0.3s;
+    }
+
+    .not_only__button:active {
+        box-shadow: 0 5px 5px rgba(156, 156, 156, 0.5);
+        transition: all 0.3s;
+    }
+
+    .img_prev:hover,
+    .img_next:hover {
+        cursor: pointer;
+        border: #FDDCC4;
+        background-color: #FDDCC4;
+        transition: all 0.5s;
+    }
+
+    .get_to:hover {
+        cursor: pointer;
+        background-color: #FDDCC4;
+        transition: all 0.5s;
+    }
+
+    .get_to:active {
+        box-shadow: 0 5px 5px rgba(156, 156, 156, 0.5);
+    }
+
+    .shelter_item a:active {
+        border-bottom: 3px solid #F1CDB3;
+        color: #FFFFFF;
+    }
+
+    .shelter_item:hover a {
+        cursor: pointer;
+        color: #FFFFFF;
+        transition: color 0.5s;
+    }
+
+    .pet_info:hover {
+        cursor: pointer;
+        background-color: #FFFFFF;
+        transition: all 0.5s;
+        box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+    }
+
+    .pet_info .pet_more:active {
+        box-shadow: 0 5px 5px rgba(156, 156, 156, 0.5);
+        transition: all 0.5s;
+    }
+
+    .pet_info:hover .pet_more {
+        cursor: pointer;
+        background-color: #FDDCC4;
+        border: #FDDCC4;
+        transition: all 0.5s;
+    }
+
+    .card_number:hover {
+        color: #292929;
+        text-decoration: underline;
+    }
+
+    footer a:hover {
+        text-decoration: underline;
+        font-size: 20.5px;
+        transition: all 0.2s;
+    }
 }
 
-.not_only__button:active {
-    box-shadow: 0 5px 5px rgba(156, 156, 156, 0.5);
-    transition: all 0.3s;
+@media screen and (max-width: 1208px) and (min-width: 769px) {
+    .img_next,
+    .img_prev {
+        flex-shrink: 0;
+    }
+
+    .slider_wrapper {
+        gap: 2%;
+    }
+
+    .pet_cards {
+        gap: 6%;
+    }
+
+    .about_img {
+        order: 2;
+    }
+
+    .help_wrapper {
+        column-gap: 80px;
+    }
+
+    .how_help {
+        width: 165px;
+    }
 }
 
-.img_prev:hover,
-.img_next:hover {
-    cursor: pointer;
-    border: #FDDCC4;
-    background-color: #FDDCC4;
-    transition: all 0.5s;
+@media screen and (max-width: 1180px) {
+    .pet_cards {
+        max-height: 434px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
 }
 
-.get_to:hover {
-    cursor: pointer;
-    background-color: #FDDCC4;
-    transition: all 0.5s;
+@media screen and (max-width: 1023.8px) and (min-width: 769px) {
+
+    /*Header*/
+    .content_container {
+        max-width: 75rem;
+        padding: 0 1.8rem;
+        flex-wrap: wrap;
+    }
+
+    /*Not only*/
+    .not_only__wrapper {
+        max-width: 66%;
+        margin: 9.6rem auto 0;
+    }
+
+    .not_only__img {
+        margin-left: auto;
+        margin-top: 6.1rem;
+    }
+
+    .not_only__button {
+        margin: 0 auto;
+    }
+
+    /*About*/
+
+    .about .content_container {
+        gap: 5rem;
+    }
+
+    .about_information {
+        max-width: 80%;
+        order: 1;
+    }
+
+    /*In addition*/
+    .in_addition_wrapper {
+        justify-content: center;
+    }
+
+    .in_addition_info {
+        max-width: 60%;
+        order: 1;
+    }
+
+    .in_addition_img {
+        order: 2;
+    }
+
+    /*Footer*/
+    footer .content_container {
+        padding-top: 25px;
+        gap: 5%;
+        justify-content: space-evenly;
+    }
+
+    .footer_img {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
-.get_to:active {
-    box-shadow: 0 5px 5px rgba(156, 156, 156, 0.5);
+@media screen and (width: 768px) {
+    /*HEADER*/
+    .content_container {
+        max-width: 768px;
+        padding: 0 30px;
+    }
+
+    /*Not only*/
+    .not_only .content_container {
+        padding: 0 30px;
+        margin: 0 auto;
+        flex-direction: column;
+    }
+
+    .not_only__wrapper {
+        margin-top: 155px;
+    }
+
+    .not_only__button {
+        margin: 0 auto;
+    }
+
+    .not_only__img {
+        width: 569px;
+        height: auto;
+        margin-top: 99px;
+        margin-left: auto;
+    }
+
+    /*About*/
+    .about .content_container {
+        flex-wrap: wrap;
+    }
+
+    .about_information {
+        order: 1;
+        gap: 25px;
+    }
+
+    .about_img {
+        order: 2;
+        margin-top: 82px;
+    }
+
+    .about_title {
+        max-width: 308px;
+        letter-spacing: 0.06em;
+    }
+
+    /*Our friends*/
+    .pet_cards {
+        max-width: 580px;
+        margin-bottom: 2px;
+        gap: 40px;
+    }
+
+    .our_friends__title {
+        margin: 80px 0 59px;
+    }
+
+    .our_pet {
+        margin-bottom: 25px;
+    }
+
+    .get_to {
+        padding: 16px;
+    }
+
+    /*Help*/
+    .help_wrapper {
+        width: 630px;
+        column-gap: 65px;
+        row-gap: 55px;
+    }
+
+    .help_title {
+        margin: 78px 0 60px;
+    }
+
+    .how_help {
+        width: 170px;
+    }
+
+    /*In addition*/
+    .in_addition_wrapper {
+        max-width: 505px;
+        padding: 81px 0 101px;
+        margin: 0 auto;
+    }
+
+    .in_addition_img {
+        margin: 0;
+        order: 2;
+    }
+
+    .in_addition_info {
+        order: 1;
+        margin: 0 auto 30px;
+    }
+
+    /*Footer*/
+    footer .content_container {
+        max-width: 708px;
+        padding: 0 34px;
+        margin-top: 30px;
+        flex-wrap: wrap;
+    }
+
+    .footer_img {
+        margin: 63px auto 0;
+    }
 }
 
-.shelter_item a:active {
-    border-bottom: 3px solid #F1CDB3;
-    color: #FFFFFF;
+@media screen and (max-width: 767.8px) {
+
+    .content_container {
+        width: 100%;
+    }
+
+    /*Header*/
+
+    .shelter_menu {
+        display: none;
+    }
+
+    .burger_menu {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 22px;
+        border: none;
+        background-color: transparent;
+    }
+
+    .burger_menu span {
+        position: absolute;
+        width: 30px;
+        height: 2px;
+        left: 2px;
+        background-color: #F1CDB3;
+    }
+
+    .burger_menu span:nth-child(1) {
+        transform: translate(-2px, -11px);
+    }
+
+    .burger_menu span:nth-child(2) {
+        transform: translate(-2px, -1px);
+    }
+
+    .burger_menu span:nth-child(3) {
+        transform: translate(-2px, 9px);
+    }
+
+    /*In addition*/
+    .in_addition_img {
+        max-width: 100%;
+        min-width: 260px;
+    }
+
+    .how_help {
+        width: 130px;
+    }
 }
 
-.shelter_item:hover a {
-    cursor: pointer;
-    color: #FFFFFF;
-    transition: color 0.5s;
+@media screen and (max-width: 767.8px) and (min-width: 321px) {
+    .content_container {
+        flex-wrap: wrap;
+    }
+
+    .not_only__wrapper {
+        max-width: 84%;
+        margin: 9rem auto 0;
+    }
+
+    .not_only__button {
+        margin: 0 auto;
+    }
+
+    .not_only__img {
+        min-width: 260px;
+        width: 80%;
+        margin-left: auto;
+        margin-top: 5.5rem;
+    }
+
+    .about .content_container {
+        padding: 50px 30px;
+    }
+
+    .about_information {
+        order: 1;
+    }
+
+    .about_img {
+        min-width: 260px;
+        width: 40%;
+        margin-top: 4rem;
+        order: 2;
+    }
+
+    .slider_wrapper {
+        gap: 2%;
+    }
+
+    .in_addition_info {
+        max-width: 55%;
+        margin: 0 auto;
+        order: 1;
+    }
+
+    .in_addition_img {
+        order: 2;
+        margin: 11px auto;
+    }
+
+    .credit_card {
+        width: 280px;
+    }
+
+    .credit_card a {
+        font-size: 15px;
+    }
+
+    .contacts h2,
+    .address h2 {
+        font-size: 25px;
+        text-align: center;
+        margin-top: 20px;
+        line-height: 130%;
+    }
+
+    .contacts,
+    .address {
+        margin: 0 auto;;
+    }
+
+    .address_item {
+        min-width: 280px;
+        margin-left: -10px;
+    }
+
+    .footer_img {
+        width: 100%;
+        max-width: 300px;
+        margin: 40px auto 0;
+    }
 }
 
-.pet_info:hover {
-    cursor: pointer;
-    background-color: #FFFFFF;
-    transition: all 0.5s;
-    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+@media screen and (max-width: 560px) {
+    h1,
+    .about_title,
+    .our_friends__title,
+    .help_title,
+    .in_addition_title {
+        font-size: 30px;
+    }
+
+    .help_wrapper {
+        column-gap: 50px;
+    }
+
+    .about .content_container {
+        padding: 30px;
+    }
+
+    .in_addition_info {
+        max-width: 70%;
+    }
+
+    .credit_card a {
+        font-size: 15px;
+    }
 }
 
-.pet_info .pet_more:active {
-    box-shadow: 0 5px 5px rgba(156, 156, 156, 0.5);
-    transition: all 0.5s;
+@media screen and (max-width: 469.8px) {
+
+    h1,
+    .about_title,
+    .our_friends__title,
+    .help_title,
+    .in_addition_title {
+        font-size: 25px;
+        letter-spacing: 0.06em;
+        line-height: 130%;
+    }
+
+    .slider_wrapper {
+        width: 96%;
+        flex-wrap: wrap;
+        margin-bottom: 42px;
+        justify-content: space-around;
+    }
+
+    .pet_cards {
+        order: 1;
+    }
+
+    .img_prev {
+        order: 2;
+    }
+
+    .img_next {
+        order: 3;
+    }
+
+    .help_wrapper {
+        column-gap: 25px;
+    }
+
+    .pet_info {
+        margin-bottom: 20px;
+    }
+
+    .get_to {
+        margin-bottom: 43px;
+    }
+
+    .in_addition .content_container {
+        padding: 0 20px;
+    }
+
+    .in_addition_info {
+        margin: 0 auto;
+        max-width: 320px;
+    }
+
+    .credit_card {
+        width: 260px;
+        padding: 0 9px;
+    }
 }
 
-.pet_info:hover .pet_more {
-    cursor: pointer;
-    background-color: #FDDCC4;
-    border: #FDDCC4;
-    transition: all 0.5s;
+@media screen and (max-width: 365px) {
+    .help .content_container {
+        padding: 0 15px;
+    }
+
+    .pet_cards {
+        column-gap: 15px;
+        justify-content: space-between;
+    }
 }
 
-.card_number:hover {
-    color: #292929;
-    text-decoration: underline;
+@media screen and (width: 320px) {
+
+    .content_container {
+        flex-wrap: wrap;
+        padding: 0 20px;
+    }
+
+    /*Not only*/
+
+    .not_only .content_container {
+        max-width: 300px;
+        padding: 0;
+    }
+
+    h1 {
+        max-width: 250px;
+        margin: 0 auto;
+        font-size: 25px;
+        text-align: center;
+        letter-spacing: 0.08rem;
+    }
+
+    .not_only__wrapper {
+        margin-top: 155px;
+    }
+
+    .information_text {
+        text-align: center;
+    }
+
+    .not_only__button {
+        margin: 0 auto;
+    }
+
+    .not_only__img {
+        min-width: 260px;
+        margin-top: 6.6rem;
+        margin-left: auto;
+    }
+
+    /*About*/
+    .about .content_container {
+        padding: 32px 25px 0px;
+    }
+
+    .about_img {
+        order: 2;
+        width: 260px;
+        height: 353.6px;
+        margin-bottom: 42px;
+    }
+
+    .about_title {
+        font-size: 25px;
+        line-height: 2rem;
+        letter-spacing: 0.06em;
+        text-align: center;
+    }
+
+    .about_information {
+        order: 1;
+        padding-top: 11px;
+        margin-bottom: 40px;
+        letter-spacing: 0;
+        gap: 23px;
+    }
+
+    .about_information__text {
+        text-align: justify;
+    }
+
+    /*Our pets*/
+    .our_friends__title {
+        font-size: 25px;
+        letter-spacing: 0.05em;
+        line-height: 1.35em;
+        margin-top: 42px;
+        margin-bottom: 40px;
+    }
+
+    .slider_wrapper {
+        width: 96%;
+        flex-wrap: wrap;
+        margin-bottom: 42px;
+        justify-content: space-around;
+    }
+
+    .img_prev {
+        order: 2;
+    }
+
+    .pet_cards {
+        order: 1;
+        margin-bottom: 19px;
+    }
+
+    .img_next {
+        order: 3;
+    }
+
+    .pet_info {
+        margin-bottom: 20px;
+    }
+
+    .get_to {
+        margin-bottom: 43px;
+        padding: 17px;
+    }
+
+    /*Help*/
+    .help .content_container {
+        padding: 0 15px;
+    }
+
+    .help_title {
+        max-width: 230px;
+        margin: 42px 0 44px;
+        font-size: 25px;
+        letter-spacing: 0.06em;
+        line-height: 125%;
+    }
+
+    .help_wrapper {
+        width: 290px;
+        margin-bottom: 15px;
+        column-gap: 30px;
+        justify-content: space-between;
+        row-gap: 4px;
+    }
+
+    .how_help {
+        width: 130px;
+    }
+
+    .how_help img {
+        width: 50px;
+        margin: 0 auto 15px;
+    }
+
+    .help_text {
+        font-size: 15px;
+        letter-spacing: 0.06rem;
+    }
+
+    /*In addition*/
+
+    .in_addition .content_container {
+        width: 300px;
+        margin: 0;
+        padding: 0 20px;
+    }
+
+    .in_addition_wrapper {
+        margin-top: 42px;
+        margin-bottom: 28px;
+    }
+
+    .in_addition_info {
+        max-width: 300px;
+        gap: 22px;
+    }
+
+    .credit_card {
+        width: 281px;
+        padding: 3px 17px 0 15px;
+        margin-top: 1px;
+    }
+
+    .card_number {
+        font-size: 15px;
+    }
+
+    .bank_info {
+        text-align: center;
+        letter-spacing: 0;
+    }
+
+    .in_addition_img {
+        order: 2;
+        width: 260px;
+        margin: 14px auto;
+    }
+
+    .in_addition_title {
+        font-size: 25px;
+        text-align: center;
+        line-height: 130%;
+    }
+
+    .text_info {
+        text-align: justify;
+    }
+
+    /*Footer*/
+    .contacts h2,
+    .address h2 {
+        font-size: 25px;
+        text-align: center;
+        line-height: 130%;
+    }
+
+    .contacts,
+    .address {
+        align-items: center;
+    }
+
+    .address {
+        justify-content: flex-start;
+        gap: 40px;
+    }
+
+    .contacts {
+        gap: 37px;
+        padding-top: 30px;
+        padding-bottom: 38px;
+    }
+
+    .address_item {
+        width: 107%;
+    }
+
+    .footer_img {
+        width: 260px;
+        margin: 28px auto 0;
+    }
 }
 
-footer a:hover {
-    text-decoration: underline;
-    font-size: 20.5px;
-    transition: all 0.2s;
+@media screen and (max-width: 319.8px) {
+    .content_container {
+        flex-wrap: wrap;
+        padding: 0 10px;
+    }
+
+    .not_only__wrapper {
+        max-width: 84%;
+        margin: 9rem auto 0;
+    }
+
+    .not_only__button {
+        margin: 0 auto;
+    }
+
+    .not_only__img {
+        min-width: 260px;
+        width: 80%;
+        margin-left: auto;
+        margin-top: 5.5rem;
+    }
+
+    .about .content_container {
+        padding: 50px 10px;
+    }
+
+    .about_information {
+        order: 1;
+    }
+
+    .about_img {
+        min-width: 260px;
+        width: 40%;
+        margin-top: 4rem;
+        order: 2;
+    }
+
+    .slider_wrapper {
+        gap: 2%;
+    }
+
+    .in_addition_info {
+        max-width: 90%;
+        margin: 0;
+        order: 1;
+    }
+
+    .in_addition_img {
+        order: 2;
+        margin: 11px auto;
+    }
+
+    .credit_card {
+        width: 260px;
+    }
+
+    .credit_card a {
+        font-size: 15px;
+    }
+
+    .contacts h2,
+    .address h2 {
+        font-size: 20px;
+        text-align: center;
+        margin-top: 20px;
+        line-height: 130%;
+    }
+
+    .contacts,
+    .address {
+        margin: 0 auto;;
+    }
+
+    .address_item {
+        min-width: 280px;
+        margin-left: -10px;
+    }
+
+    .address_item a,
+    .contacts_item a {
+        font-size: 15px;
+    }
+
+    .footer_img {
+        width: 100%;
+        max-width: 300px;
+        margin: 40px auto 0;
+    }
 }
