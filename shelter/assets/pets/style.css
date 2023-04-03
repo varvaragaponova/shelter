@@ -83,6 +83,7 @@ header {
 
 .shelter_list {
     display: flex;
+    margin-top: -4px;
     justify-content: space-between;
     gap: 36px;
     align-items: center;
@@ -149,10 +150,10 @@ h1 {
 }
 
 .pet_info__name {
-    margin: 26px 0 31px;
+    margin: 25px 0 31px;
     font: 400 20px 'Georgia';
     color: #545454;
-    letter-spacing: 0.05rem;
+    letter-spacing: 0.06em;
 }
 
 .our_pet {

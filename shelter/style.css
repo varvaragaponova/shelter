@@ -169,6 +169,11 @@ h1 {
     word-wrap: break-word;
 }
 
+.about_title {
+    letter-spacing: 0.06em;
+    max-width: 308px;
+}
+
 .about_information__text {
     font: 400 15px 'Arial', sans-serif;
     line-height: 1.5rem;
@@ -242,7 +247,7 @@ h1 {
 }
 
 .pet_info__name {
-    margin-bottom: 31px;
+    margin-bottom: 32px;
     font: 400 20px 'Georgia';
     color: #545454;
     letter-spacing: 0.06rem;
@@ -304,7 +309,7 @@ h1 {
 
 .help_title {
     max-width: 308px;
-    margin: 80px 0 60px;
+    margin: 80px 0 59px;
     text-align: center;
     letter-spacing: 0.12rem;
 }
@@ -670,6 +675,11 @@ footer a {
         margin-top: 82px;
     }
 
+    .about_title {
+        max-width: 308px;
+        letter-spacing: 0.06em;
+    }
+
     /*Our friends*/
     .pet_cards {
         max-width: 580px;
@@ -677,8 +687,12 @@ footer a {
         gap: 40px;
     }
 
+    .our_friends__title {
+        margin: 80px 0 59px;
+    }
+
     .our_pet {
-        margin-bottom: 27px;
+        margin-bottom: 25px;
     }
 
     .get_to {
