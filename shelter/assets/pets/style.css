@@ -449,6 +449,10 @@ footer a {
         margin: 40px 0 76px;
     }
 
+    .pet_info__name {
+        margin: 27px 0 31px;
+    }
+
     /*Footer*/
     footer .content_container {
         flex-wrap: wrap;
