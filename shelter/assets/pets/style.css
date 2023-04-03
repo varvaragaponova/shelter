@@ -330,13 +330,48 @@ footer a {
     }
 }
 
-@media screen and (max-width: 1023.8px) {
+@media screen and (max-width: 1220px) {
+    .pets_card__wrapper {
+        max-height: 930px;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        overflow: hidden;
+    }
+}
+@media screen and (max-width: 1023.8px) and (min-width: 769px) {
 
     /*Header*/
     .content_container {
         max-width: 75rem;
         padding: 0 1.8rem;
         flex-wrap: wrap;
+    }
+
+    .pets_card__wrapper {
+        min-width: 580px;
+        max-width: 1200px;
+        min-height: 930px;
+        max-height: 1365px;
+        width: 100%;
+    }
+
+    footer .content_container {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 32px 65px 0;
+    }
+
+    .footer_img {
+        margin: 62px auto 0;
+    }
+}
+
+@media screen and (max-width: 767px) and (min-width: 321px) {
+    .pets_card__wrapper {
+        max-width: 580px;
+        min-width: 270px;
+        height: 1365px;
+        width: 100%;
     }
 }
 
@@ -352,6 +387,7 @@ footer a {
     .pets_card__wrapper {
         max-width: 580px;
         max-height: 1365px;
+        justify-content: inherit;
         overflow: hidden;
     }
 
