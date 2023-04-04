@@ -333,7 +333,7 @@ footer a {
 
 @media screen and (max-width: 1220px) {
     .pets_card__wrapper {
-        max-height: 930px;
+        max-height: 929px;
         justify-content: space-around;
         flex-wrap: wrap;
         overflow: hidden;
