@@ -6,10 +6,13 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
     position: relative;
+    width: 100%;
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -458,20 +461,6 @@ footer a {
     transition: all 0.2s;
 }
 
-/*Open*/
-
-header.open .burger_menu {
-    transform: rotate(90deg);
-    transition: transform 0.5s;
-}
-
-/* header.open .burger_menu span:nth-child(1) {
-    left: -10px;
-}
-
-header.open .burger_menu span:nth-child(3) {
-    left: 10px;
-} */
 /*--HOOVER AND ACTIVE--*/
 
 @media (any-hover: hover) {
@@ -771,10 +760,11 @@ header.open .burger_menu span:nth-child(3) {
     }
 
     .burger_menu {
+        position: relative;
         display: flex;
         gap: 8px;
-        /* position: relative; */
         width: 30px;
+        z-index: 1;
         flex-direction: column;
         border: none;
         background-color: transparent;
@@ -790,20 +780,16 @@ header.open .burger_menu span:nth-child(3) {
         background-color: #F1CDB3;
     }
 
-    /* .burger_menu span:nth-child(1) {
-        transform: translate(-2px, -11px);
-    }
+    /*Open*/
 
-    .burger_menu span:nth-child(2) {
-        transform: translate(-2px, -1px);
-    }
-
-    .burger_menu span:nth-child(3) {
-        transform: translate(-2px, 9px);
-    } */
+    header.open .burger_menu {
+    transform: rotate(90deg);
+    transition: transform 0.5s;
+}
 
     .shelter_menu {
         position: absolute;
+        z-index: 1;
         display: block;
         width: 320px;
         height: 100vh;
@@ -811,6 +797,11 @@ header.open .burger_menu span:nth-child(3) {
         top: 0;
         padding-top: 258px;
         background-color: #292929;
+    }
+
+    .shelter_list {
+        display: flex;
+        flex-direction: column;
     }
 
     header .shelter_menu {
@@ -832,6 +823,7 @@ header.open .burger_menu span:nth-child(3) {
         padding-bottom: 10px;
     }
 
+
     header.open .shelter_item {
         margin-bottom: 20px;
     }
@@ -842,6 +834,28 @@ header.open .burger_menu span:nth-child(3) {
 
     header.open .shelter_item:nth-child(3) {
         margin-bottom: 14px;
+    }
+
+    header.open .shelter_item a:active {
+        border-bottom: 3px solid #F1CDB3;
+        color: #FFFFFF;
+    }
+
+    body.background:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 0;
+        background-color: rgba(41, 41, 41, 0.6);
+    }
+
+    body.no_scroll {
+        height: 100vh;
+        overflow-y: hidden;
+        background: rgba(41, 41, 41, 0.6);
     }
 
     /*In addition*/
