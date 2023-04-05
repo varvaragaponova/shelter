@@ -458,6 +458,20 @@ footer a {
     transition: all 0.2s;
 }
 
+/*Open*/
+
+header.open .burger_menu {
+    transform: rotate(90deg);
+    transition: transform 0.5s;
+}
+
+/* header.open .burger_menu span:nth-child(1) {
+    left: -10px;
+}
+
+header.open .burger_menu span:nth-child(3) {
+    left: 10px;
+} */
 /*--HOOVER AND ACTIVE--*/
 
 @media (any-hover: hover) {
@@ -757,23 +771,26 @@ footer a {
     }
 
     .burger_menu {
-        display: block;
-        position: relative;
+        display: flex;
+        gap: 8px;
+        /* position: relative; */
         width: 30px;
-        height: 22px;
+        flex-direction: column;
         border: none;
         background-color: transparent;
+        transition: transform 0.5s;
     }
 
     .burger_menu span {
-        position: absolute;
+        display: inline-block;
+        /* position: absolute; */
         width: 30px;
         height: 2px;
-        left: 2px;
+        /* left: 2px; */
         background-color: #F1CDB3;
     }
 
-    .burger_menu span:nth-child(1) {
+    /* .burger_menu span:nth-child(1) {
         transform: translate(-2px, -11px);
     }
 
@@ -783,6 +800,48 @@ footer a {
 
     .burger_menu span:nth-child(3) {
         transform: translate(-2px, 9px);
+    } */
+
+    .shelter_menu {
+        position: absolute;
+        display: block;
+        width: 320px;
+        height: 100vh;
+        right: -320px;
+        top: 0;
+        padding-top: 258px;
+        background-color: #292929;
+    }
+
+    header .shelter_menu {
+        transition: transform .5s;
+    }
+
+    header.open .shelter_menu {
+        transform: translateX(-100%);
+        transition: transform .5s;
+    }
+
+    header.open .shelter_list {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    header.open .shelter_list a {
+        font: 400 32px 'Arial', sans-serif;
+        padding-bottom: 10px;
+    }
+
+    header.open .shelter_item {
+        margin-bottom: 20px;
+    }
+
+    header.open .shelter_item:nth-child(2) {
+        margin-bottom: 16px;
+    }
+
+    header.open .shelter_item:nth-child(3) {
+        margin-bottom: 14px;
     }
 
     /*In addition*/
