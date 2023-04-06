@@ -262,6 +262,7 @@ h1 {
     margin-bottom: 25px;
     border-top-left-radius: 9px;
     border-top-right-radius: 9px;
+    object-fit: cover;
 }
 
 .pet_more {
