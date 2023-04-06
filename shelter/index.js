@@ -10,6 +10,7 @@ const body = document.querySelector('body');
 const pet = document.querySelectorAll('.pet_info');
 const popUp = document.querySelector('.pop_up__pet');
 const html = document.querySelector('html');
+const popUpClose = document.querySelector('.pop_up__close');
 
 menuButton.addEventListener('click', function(event) {
     header.classList.toggle('open');
@@ -28,11 +29,28 @@ document.body.addEventListener('click', function(event) {
 });
 
 /*POP UP*/
-console.log(pet);
 pet.forEach(item => {
-    item.addEventListener('click', function() {
+    item.addEventListener('click', function(event) {
+        console.log(1);
         popUp.classList.toggle('opened');
         body.classList.toggle('background');
-        html.classList.toggle('stop')
+        html.classList.toggle('stop');
+        event.stopPropagation();
     })
+})
+
+document.body.addEventListener('click', function(event) {
+    console.log(2);
+    if (event.target === popUp) return;
+    if (popUp.classList.contains('opened')) {
+        popUp.classList.remove('opened');
+        html.classList.remove('stop');
+        body.classList.remove('background');
+    }
+})
+
+popUpClose.addEventListener('click', function() {
+    popUp.classList.remove('opened');
+    html.classList.remove('stop');
+    body.classList.remove('background');
 })

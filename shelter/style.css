@@ -469,14 +469,14 @@ footer a {
 .pop_up__pet.opened {
     position: fixed;
     transform: translateY(-50%);
-    top: 50%;
+    top: 55%;
     display: block;
     z-index: 1;
     /* top: 188px;
     bottom: 189px; */
 }
 
-.pop_up__pet.opened .pop_up_wrapper {
+.pop_up__pet.opened .pop_up__wrapper {
     max-width: 900px;
     max-height: 500px;
     display: flex;
@@ -554,6 +554,7 @@ footer a {
     color: #292929;
     font-size: 31px;
     background-color: transparent;
+    transition: all .5s;
 }
 
 body:after {
@@ -649,6 +650,17 @@ html.stop {
         text-decoration: underline;
         font-size: 20.5px;
         transition: all 0.2s;
+    }
+
+    .pop_up__close:hover {
+        background-color: #FDDCC4;
+        border-color: #FDDCC4;
+        cursor: pointer;
+        transition: all .5s;
+    }
+
+    .pop_up__wrapper:hover {
+        box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
     }
 }
 
