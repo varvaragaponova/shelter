@@ -31,7 +31,6 @@ document.body.addEventListener('click', function(event) {
 /*POP UP*/
 pet.forEach(item => {
     item.addEventListener('click', function(event) {
-        console.log(1);
         popUp.classList.toggle('opened');
         body.classList.toggle('background');
         html.classList.toggle('stop');
@@ -39,14 +38,17 @@ pet.forEach(item => {
     })
 })
 
-document.body.addEventListener('click', function(event) {
-    console.log(2);
-    if (event.target === popUp) return;
+document.body.addEventListener('click', function() {
     if (popUp.classList.contains('opened')) {
         popUp.classList.remove('opened');
         html.classList.remove('stop');
         body.classList.remove('background');
     }
+})
+
+popUp.addEventListener('click', function(event) {
+    event.stopPropagation();
+    return;
 })
 
 popUpClose.addEventListener('click', function() {
