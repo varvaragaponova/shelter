@@ -19,6 +19,7 @@ const petAge = document.querySelector('.age');
 const petInoculations = document.querySelector('.inoculations');
 const petDiseases = document.querySelector('.diseases');
 const petParasites = document.querySelector('.parasites');
+const overlay = document.querySelector('.overlay');
 
 menuButton.addEventListener('click', function(event) {
     header.classList.toggle('open');
@@ -40,7 +41,7 @@ document.body.addEventListener('click', function(event) {
 
 const petOpen = (event, item) => {
     popUp.classList.toggle("opened");
-    body.classList.toggle("background");
+    overlay.classList.toggle("add");
     html.classList.toggle("stop");
     event.stopPropagation();
 
@@ -48,7 +49,7 @@ const petOpen = (event, item) => {
     const currentPet = json.find(elem => elem.name.toLowerCase() === item.id);
     popUpImg.src = currentPet.img;
     petName.textContent = currentPet.name;
-    petIs.textContent = `${currentPet.type}: ${currentPet.breed}`;
+    petIs.textContent = `${currentPet.type} - ${currentPet.breed}`;
     petInfo.textContent = currentPet.description;
     petAge.textContent = ' ' + currentPet.age;
     petInoculations.textContent = ' ' + currentPet.inoculations;
@@ -64,7 +65,7 @@ document.body.addEventListener('click', function() {
     if (popUp.classList.contains('opened')) {
         popUp.classList.remove('opened');
         html.classList.remove('stop');
-        body.classList.remove('background');
+        overlay.classList.remove("add");
     }
 })
 
@@ -76,5 +77,5 @@ popUp.addEventListener('click', function(event) {
 popUpClose.addEventListener('click', function() {
     popUp.classList.remove('opened');
     html.classList.remove('stop');
-    body.classList.remove('background');
+    overlay.classList.remove("add");
 })
