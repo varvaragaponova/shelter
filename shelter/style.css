@@ -1214,6 +1214,7 @@ html.stop {
         gap: 1%;
     }
 }
+
 @media screen and (max-width: 560px) {
     h1,
     .about_title,
