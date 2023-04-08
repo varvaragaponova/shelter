@@ -23,7 +23,7 @@ const overlay = document.querySelector('.overlay');
 menuButton.addEventListener('click', function(event) {
     header.classList.toggle('open');
     body.classList.toggle('no_scroll');
-    body.classList.toggle('background');
+    overlay.classList.toggle("add");
     event.stopPropagation();
 });
 
@@ -32,7 +32,7 @@ document.body.addEventListener('click', function(event) {
     if (header.classList.contains('open')) {
         header.classList.remove('open');
         body.classList.remove('no_scroll');
-        body.classList.remove('background');
+        overlay.classList.remove("add");
     }
 });
 
