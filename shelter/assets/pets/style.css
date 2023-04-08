@@ -104,9 +104,8 @@ header {
     transition: all 0.03s;
 }
 
-.shelter_list .shelter_item:nth-child(2) a {
+.shelter_list .shelter_item:nth-child(2) a span {
     border-bottom: solid 3px #F1CDB3;
-    color: #292929;
 }
 
 .burger_menu {
@@ -415,7 +414,7 @@ html.stop {
         transition: all 0.5s;
     }
 
-    .shelter_item:active {
+    .shelter_item:active span {
         border-bottom: 3px solid #F1CDB3;
         transition: all 0.02s;
     }
@@ -788,6 +787,12 @@ html.stop {
         flex-direction: column;
     }
 
+    .shelter_list a {
+        display: block;
+        width: 320px;
+        text-align: center;
+    }
+
     header .shelter_menu {
         transition: transform .5s;
     }
@@ -799,13 +804,17 @@ html.stop {
 
     header.open .shelter_list {
         flex-direction: column;
-        gap: 40px;
+        gap: 0;
     }
 
     header.open .shelter_list a {
         font: 400 32px 'Arial', sans-serif;
         color: #CDCDCD;
         padding-bottom: 10px;
+    }
+
+    .shelter_list .shelter_item:not(:first-child) a {
+        padding-top: 30px;
     }
 
     header.open .shelter_list .shelter_item:nth-child(2) a {
@@ -825,7 +834,7 @@ html.stop {
         margin-bottom: 14px;
     }
 
-    header.open .shelter_item a:active {
+    header.open .shelter_item a span:active {
         border-bottom: 3px solid #F1CDB3;
         color: #FFFFFF;
     }

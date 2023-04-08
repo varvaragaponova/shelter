@@ -77,7 +77,7 @@ header {
     transition: all 0.5s;
 }
 
-.shelter_list .shelter_item:first-child a {
+.shelter_list .shelter_item:first-child a span {
     border-bottom: solid 3px #F1CDB3;
     color: #FAFAFA;
     pointer-events: none;
@@ -617,7 +617,7 @@ html.stop {
         box-shadow: 0 5px 5px rgba(156, 156, 156, 0.5);
     }
 
-    .shelter_item a:active {
+    .shelter_item a span:active {
         border-bottom: 3px solid #F1CDB3;
         color: #FFFFFF;
     }
@@ -1022,7 +1022,7 @@ html.stop {
 
     header.open .shelter_list {
         flex-direction: column;
-        gap: 40px;
+        gap: 0;
     }
 
     header.open .shelter_list a {
@@ -1030,6 +1030,20 @@ html.stop {
         padding-bottom: 10px;
     }
 
+    .shelter_list .shelter_item:not(:first-child) a {
+        padding-top: 30px;
+    }
+
+    .shelter_list .shelter_item a {
+        display: block;
+        width: 320px;
+        border: none;
+        text-align: center;
+    }
+
+    .shelter_list .shelter_item a span {
+        padding-bottom: 11px;
+    }
 
     header.open .shelter_item {
         margin-bottom: 20px;
@@ -1043,7 +1057,7 @@ html.stop {
         margin-bottom: 14px;
     }
 
-    header.open .shelter_item a:active {
+    header.open .shelter_item a span:active {
         border-bottom: 3px solid #F1CDB3;
         color: #FFFFFF;
     }
