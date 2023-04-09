@@ -57,7 +57,8 @@ let totalPagesCount;
 let prevTotalPagesCount;
 let imagesPerPage;
 
-window.addEventListener('resize', () => {
+
+window.addEventListener('resize', (e) => {
     const { clientWidth } = document.body;
     prevTotalPagesCount = totalPagesCount;
 
@@ -71,13 +72,17 @@ window.addEventListener('resize', () => {
         totalPagesCount = 16;
     }
 
+    if (prevTotalPagesCount === totalPagesCount) {
+        return;
+    }
+
     const prevImagesPerPage = imagesPerPage;
 
     breakTotalPerPage(true);
 
     const prevElement = prevImagesPerPage * currentPageNum;
 
-    currentPageNum = Math.floor(prevElement / imagesPerPage);
+    currentPageNum = Math.round(prevElement / imagesPerPage);
     currentPageNumber.textContent = currentPageNum.toString();
     renderImages(currentPageNum);
 });
@@ -98,14 +103,6 @@ function initPages() {
     breakTotalPerPage();
 
     renderImages(currentPageNum);
-
-    const pet = document.querySelectorAll('.pet_info');
-    console.log(pet);
-
-    pet.forEach(item => {
-        console.log('==', pet);
-        item.addEventListener('click', (event) => petOpen(event, item));
-    })
 
     prevPage.disabled = true;
     firstPage.disabled = true;
@@ -174,6 +171,13 @@ function renderImages(currentPageIndex) {
             </div>
         `;
         petsWrapper.insertAdjacentHTML('beforeend', singleImage);
+    });
+
+    const pet = document.querySelectorAll('.pet_info');
+    console.log('==', pet);
+
+    pet.forEach(item => {
+        item.addEventListener('click', (event) => petOpen(event, item));
     })
 }
 
