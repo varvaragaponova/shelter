@@ -212,7 +212,7 @@ h1 {
     transition: all 0.5s;
 }
 
-.img_prev {
+/* .img_prev {
     order: 1;
 }
 
@@ -222,7 +222,7 @@ h1 {
 
 .img_next {
     order: 3;
-}
+} */
 
 .slider_wrapper {
     width: 100%;
@@ -232,11 +232,16 @@ h1 {
     align-items: center;
 }
 
-.pet_cards {
+.pet_cards__wrapper  {
+    position: relative;
     max-width: 990px;
+    overflow: hidden;
+}
+
+.pet_cards {
     display: flex;
     gap: 90px;
-    overflow: hidden;
+    justify-content: flex-start;
 }
 
 .pet_info {
@@ -700,14 +705,13 @@ html.stop {
 @media screen and (max-width: 1180px) {
     .pet_cards {
         max-height: 434px;
-        justify-content: center;
-        flex-wrap: wrap;
+        max-width: 600px;
+        justify-content: start;
         margin-bottom: 20px;
     }
 }
 
 @media screen and (max-width: 1023.8px) and (min-width: 769px) {
-
     /*Header*/
     .content_container {
         max-width: 75rem;
@@ -983,6 +987,10 @@ html.stop {
         width: 30px;
         height: 2px;
         background-color: #F1CDB3;
+    }
+
+    .pet_cards {
+        max-width: 270px;
     }
 
     /*Open*/
@@ -1270,10 +1278,10 @@ html.stop {
     }
 
     .slider_wrapper {
-        width: 96%;
+        width: 270px;
         flex-wrap: wrap;
         margin-bottom: 42px;
-        justify-content: space-around;
+        justify-content: space-between;
     }
 
     .pet_cards {

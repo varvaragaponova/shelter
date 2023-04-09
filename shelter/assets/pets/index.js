@@ -6,7 +6,6 @@ const menuButton = document.getElementById('menu');
 const header = document.querySelector('header');
 const menu = document.querySelector('.shelter_menu');
 const body = document.querySelector('body');
-const pet = document.querySelectorAll('.pet_info');
 const popUp = document.querySelector('.pop_up__pet');
 const html = document.querySelector('html');
 const popUpClose = document.querySelector('.pop_up__close');
@@ -36,6 +35,162 @@ document.body.addEventListener('click', function(event) {
     }
 });
 
+/*Pagination*/
+const petsWrapper = document.querySelector('.pets_card__wrapper');
+const currentPageNumber = document.querySelector('.now');
+const firstPage = document.querySelectorAll('.prev')[0];
+const prevPage = document.querySelectorAll('.prev')[1];
+
+const nextPage = document.querySelectorAll('.next')[0];
+const lastPage = document.querySelectorAll('.next')[1];
+
+document.addEventListener('DOMContentLoaded', initPages);
+nextPage.addEventListener('click', () => turnPage(1));
+prevPage.addEventListener('click', () => turnPage(-1));
+
+firstPage.addEventListener('click', () => toLimitPage(true));
+lastPage.addEventListener('click', () => toLimitPage());
+
+let imageArray = [];
+let currentPageNum = 1;
+let totalPagesCount;
+let prevTotalPagesCount;
+let imagesPerPage;
+
+window.addEventListener('resize', () => {
+    const { clientWidth } = document.body;
+    prevTotalPagesCount = totalPagesCount;
+
+    if (clientWidth >= 1080) {
+        totalPagesCount = 6;
+    } else if (clientWidth >= 768) {
+        totalPagesCount = 8;
+    } else if (clientWidth >= 540) {
+        totalPagesCount = 12;
+    } else {
+        totalPagesCount = 16;
+    }
+
+    const prevImagesPerPage = imagesPerPage;
+
+    breakTotalPerPage(true);
+
+    const prevElement = prevImagesPerPage * currentPageNum;
+
+    currentPageNum = Math.floor(prevElement / imagesPerPage);
+    currentPageNumber.textContent = currentPageNum.toString();
+    renderImages(currentPageNum);
+});
+
+function initPages() {
+    const { clientWidth } = document.body;
+
+    if (clientWidth >= 1080) {
+        totalPagesCount = 6;
+    } else if (clientWidth >= 768) {
+        totalPagesCount = 8;
+    } else if (clientWidth >= 540) {
+        totalPagesCount = 12;
+    } else {
+        totalPagesCount = 16;
+    }
+
+    breakTotalPerPage();
+
+    renderImages(currentPageNum);
+
+    const pet = document.querySelectorAll('.pet_info');
+    console.log(pet);
+
+    pet.forEach(item => {
+        console.log('==', pet);
+        item.addEventListener('click', (event) => petOpen(event, item));
+    })
+
+    prevPage.disabled = true;
+    firstPage.disabled = true;
+}
+
+function breakTotalPerPage(isSkipGenerating) {
+    const fullPagesArray = (isSkipGenerating ? imageArray : generateImageArray()).flat(2);
+    imageArray = [];
+    imagesPerPage = 48 / totalPagesCount;
+    for (let i = 0; i < fullPagesArray.length; i+=imagesPerPage) {
+        imageArray.push(fullPagesArray.slice(i, i + imagesPerPage));
+    }
+    // console.log(imageArray);
+}
+function turnPage(offset) {
+    if (offset > 0) {
+        currentPageNum++;
+    } else {
+        currentPageNum--;
+    }
+    renderImages(currentPageNum);
+    currentPageNumber.textContent = (currentPageNum).toString();
+
+    if (currentPageNum === totalPagesCount) {
+        nextPage.disabled = true;
+        lastPage.disabled = true;
+    } else if (currentPageNum === 1) {
+        prevPage.disabled = true;
+        firstPage.disabled = true;
+    } else {
+        nextPage.disabled = false;
+        lastPage.disabled = false;
+        firstPage.disabled = false;
+        prevPage.disabled = false;
+    }
+}
+
+function toLimitPage(isToFirstPage) {
+    if (isToFirstPage) {
+        renderImages(1);
+        currentPageNumber.textContent = '1';
+        currentPageNum = 1;
+        firstPage.disabled = true;
+        prevPage.disabled = true;
+        lastPage.disabled = false;
+        nextPage.disabled = false;
+    } else {
+        renderImages(imageArray.length);
+        currentPageNumber.textContent = totalPagesCount.toString();
+        currentPageNum = totalPagesCount;
+        firstPage.disabled = false;
+        prevPage.disabled = false;
+        lastPage.disabled = true;
+        nextPage.disabled = true;
+    }
+}
+
+function renderImages(currentPageIndex) {
+    petsWrapper.innerHTML = '';
+    imageArray[currentPageIndex - 1].forEach(image => {
+        const singleImage = `
+            <div id="${(image.name).toLowerCase()}" class="pet_info">
+                <img class="our_pet" src="${image.img}" alt="${image.type}">
+                <p class="pet_info__name">${image.name}</p>
+                <button class="pet_more">Learn more</button>
+            </div>
+        `;
+        petsWrapper.insertAdjacentHTML('beforeend', singleImage);
+    })
+}
+
+function generateImageArray() {
+    const totalArray = [];
+    for (let i = 0; i < 6; i++) {
+        totalArray.push(getRandomOrder(json));
+    }
+    return totalArray;
+}
+
+function getRandomOrder(arr) {
+    return arr
+        .map(el => ({ ...el, random: Math.random() }))
+        .sort((a, b) => a.random - b.random)
+}
+
 /*Pop Up*/
 
 const petOpen = (event, item) => {
@@ -55,10 +210,6 @@ const petOpen = (event, item) => {
     petDiseases.textContent = ' ' + currentPet.diseases;
     petParasites.textContent = ' ' + currentPet.parasites;
 }
-
-pet.forEach(item => {
-    item.addEventListener('click', (event) => petOpen(event, item));
-})
 
 document.body.addEventListener('click', function() {
     if (popUp.classList.contains('opened')) {

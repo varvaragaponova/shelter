@@ -207,12 +207,21 @@ h1 {
     transition: all 0.5s;
 }
 
-.prev[disabled=disabled] {
+.prev:disabled {
     border: 2px solid#CDCDCD;
     pointer-events: none;
 }
 
-.prev[disabled=disabled] svg path {
+.prev:disabled svg path {
+    fill: #CDCDCD;
+}
+
+.next:disabled {
+    border: 2px solid#CDCDCD;
+    pointer-events: none;
+}
+
+.next:disabled svg path {
     fill: #CDCDCD;
 }
 
@@ -396,7 +405,6 @@ footer a {
 html.stop {
     overflow-y: hidden;
 }
-
 
 /*--HOOVER AND ACTIVE--*/
 
@@ -1031,5 +1039,11 @@ html.stop {
 
     header.open .shelter_list a {
         font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 538.8px) {
+    .pets_card__wrapper {
+        max-height: 1365px;
     }
 }

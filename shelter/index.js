@@ -1,7 +1,6 @@
 // console.log("Итоговая оценка: 100; Вёрстка страницы Main соответствует макету при ширине экрана 1280px: +14\nблок <header>: +2\nблок Not only: +2\nблок About: +2\nблок Our Friends: +2\nблок Help: +2\nблок In addition: +2\nблок <footer>: +2\nВёрстка страницы Main соответствует макету при ширине экрана 768px: +14\nблок <header>: +2\nблок Not only: +2\nблок About: +2\nблок Our Friends: +2\nблок Help: +2\nблок In addition: +2\nблок <footer>: +2\nВёрстка страницы Main соответствует макету при ширине экрана 320px: +14\nблок <header>: +2\nблок Not only: +2\nблок About: +2\nблок Our Friends: +2\nблок Help: +2\nблок In addition: +2\nблок <footer>: +2\nВёрстка страницы Pets соответствует макету при ширине экрана 1280px: +6\nблок <header>: +2\nблок Our Friends: +2\nблок <footer>: +2\nВёрстка страницы Pets соответствует макету при ширине экрана 768px: +6\nблок <header>: +2\nблок Our Friends: +2\nблок <footer>: +2\nВёрстка страницы Pets соответствует макету при ширине экрана 320px: +6\nблок <header>: +2\nблок Our Friends: +2\nблок <footer>: +2\nНи на одном из разрешений до 320px включительно не появляется горизонтальная полоса прокрутки, справа от отдельных блоков не появляются белые поля. Весь контент страницы при этом сохраняется: не обрезается и не удаляется: +20\nнет полосы прокрутки при ширине страницы Main от 1280рх до 768рх: +5\nнет полосы прокрутки при ширине страницы Main от 768рх до 320рх: +5\nнет полосы прокрутки при ширине страницы Pets от 1280рх до 768рх: +5\nнет полосы прокрутки при ширине страницы Pets от 768рх до 320рх: +5\nВерстка резиновая: при плавном изменении размера экрана от 1280px до 320px верстка подстраивается под этот размер, элементы верстки меняют свои размеры и расположение, не наезжают друг на друга, изображения могут менять размер, но сохраняют правильные пропорции (Примеры неправильной и правильной реализации): +8\nна странице Main: +4\nна странице Pets: +4\nПри ширине экрана меньше 768px на обеих страницах меню в хедере скрывается, появляется иконка бургер-меню: +4\nВерстка обеих страниц валидная: +8");
 
 import json from './pets.json' assert { type: 'json'};
-/*Burger*/
 
 const menuButton = document.getElementById('menu');
 const header = document.querySelector('header');
@@ -20,6 +19,12 @@ const petInoculations = document.querySelector('.inoculations');
 const petDiseases = document.querySelector('.diseases');
 const petParasites = document.querySelector('.parasites');
 const overlay = document.querySelector('.overlay');
+const nextSlide = document.querySelector('.img_next');
+const prevSlide = document.querySelector('.img_prev');
+const cardWrapper = document.querySelector('.pet_cards');
+const cardBlock = document.querySelector('.pet_cards__wrapper');
+
+/*Burger*/
 
 menuButton.addEventListener('click', function(event) {
     header.classList.toggle('open');
@@ -45,7 +50,6 @@ const petOpen = (event, item) => {
     html.classList.toggle("stop");
     event.stopPropagation();
 
-    console.log(item.id);
     const currentPet = json.find(elem => elem.name.toLowerCase() === item.id);
     popUpImg.src = currentPet.img;
     petName.textContent = currentPet.name;
