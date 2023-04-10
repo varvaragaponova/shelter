@@ -22,16 +22,24 @@
             <nav class="shelter_menu">
                 <ul class="shelter_list">
                     <li class="shelter_item">
-                        <a href="#">About the shelter</a>
+                        <a href="#">
+                            <span>About the shelter</span>
+                        </a>
                     </li>
                     <li class="shelter_item">
-                        <a href="./assets/pets/index.html">Our pets</a>
+                        <a href="./assets/pets/index.html">
+                            <span>Our pets</span>
+                        </a>
                     </li>
                     <li class="shelter_item">
-                        <a href="#help">Help the shelter</a>
+                        <a href="#help">
+                            <span>Help the shelter</span>
+                        </a>
                     </li>
                     <li class="shelter_item">
-                        <a href="#contacts">Contacts</a>
+                        <a href="#contacts">
+                            <span>Contacts</span>
+                        </a>
                     </li>
                 </ul>
             </nav>
@@ -68,49 +76,88 @@
 
         <section class="our_friends" id="pets">
             <div class="content_container">
+                <div class="overlay">
+                    <div class="pop_up__pet">
+                        <div class="pop_up__wrapper">
+                            <img src="./assets/img/pets/jennifer.png" alt="dog" class="pop_up__img">
+                            <div class="pop_up__info">
+                                <div class="pop_up__name">
+                                    <h2 class="pop_up__title">Jennifer</h2>
+                                    <p class="pop_up__subtitle">Dog - Labrador</p>
+                                </div>
+                                <p class="pop_up__description">Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever home. This girl really enjoys being able to go outside to run and play, but won't hesitate to play up a storm in the house if she has all of her favorite toys.</p>
+                                <ul class="pop_up__details">
+                                    <li class="pop_up__item">
+                                        <span class="item_text">
+                                            <span class="bold">Age:</span><span class="age"> 2 months</span>
+                                        </span>
+                                    </li>
+                                    <li class="pop_up__item">
+                                        <span class="item_text">
+                                            <span class="bold">Inoculations:</span><span class="inoculations"> none</span>
+                                        </span>
+                                    </li>
+                                    <li class="pop_up__item">
+                                        <span class="item_text">
+                                            <span class="bold">Diseases:</span><span class="diseases"> none</span>
+                                        </span>
+                                    </li>
+                                    <li class="pop_up__item">
+                                    <span class="item_text">
+                                            <span class="bold">Parasites:</span><span class="parasites"> none</span>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <button class="pop_up__close">&times;</button>
+                    </div>
+                </div>
                 <h2 class="our_friends__title">Our friends who <br>are looking for a house</h2>
                 <div class="slider_wrapper">
                     <button class="img_prev">&larr;</button>
-                    <div class="pet_cards">
-                        <div class="pet_info">
-                            <img class="our_pet" src="./assets/img/pets/katrine.png" alt="cat_katrine">
-                            <p class="pet_info__name">Katrine</p>
-                            <button class="pet_more">Learn more</button>
-                        </div>
-                        <div class="pet_info">
-                            <img class="our_pet" src="./assets/img/pets/jennifer.png" alt="dog_jennifer">
-                            <p class="pet_info__name">Jennifer</p>
-                            <button class="pet_more">Learn more</button>
-                        </div>
-                        <div class="pet_info">
-                            <img class="our_pet" src="./assets/img/pets/woody.png" alt="dog_woody">
-                            <p class="pet_info__name">Woody</p>
-                            <button class="pet_more">Learn more</button>
-                        </div>
-                        <div class="pet_info">
-                            <img class="our_pet" src="./assets/img/pets/sophia.png" alt="dog_sophia">
-                            <p class="pet_info__name">Sophia</p>
-                            <button class="pet_more">Learn more</button>
-                        </div>
-                        <div class="pet_info">
-                            <img class="our_pet" src="./assets/img/pets/timmy.png" alt="cat_timmy">
-                            <p class="pet_info__name">Timmy</p>
-                            <button class="pet_more">Learn more</button>
-                        </div>
-                        <div class="pet_info">
-                            <img class="our_pet" src="./assets/img/pets/charly.png" alt="dog_charly">
-                            <p class="pet_info__name">Charly</p>
-                            <button class="pet_more">Learn more</button>
-                        </div>
-                        <div class="pet_info">
-                            <img class="our_pet" src="./assets/img/pets/scarlett.png" alt="dog_scarlett">
-                            <p class="pet_info__name">Scarlett</p>
-                            <button class="pet_more">Learn more</button>
-                        </div>
-                        <div class="pet_info">
-                            <img class="our_pet" src="./assets/img/pets/freddie.png" alt="cat_freddie">
-                            <p class="pet_info__name">Freddie</p>
-                            <button class="pet_more">Learn more</button>
+                    <div class="pet_cards__wrapper">
+                        <div class="pet_cards">
+                            <div id="katrine" class="pet_info">
+                                <img class="our_pet" src="./assets/img/pets/katrine.png" alt="cat_katrine">
+                                <p class="pet_info__name">Katrine</p>
+                                <button class="pet_more">Learn more</button>
+                            </div>
+                            <div id="jennifer" class="pet_info">
+                                <img class="our_pet" src="./assets/img/pets/jennifer.png" alt="dog_jennifer">
+                                <p class="pet_info__name">Jennifer</p>
+                                <button class="pet_more">Learn more</button>
+                            </div>
+                            <div id="woody" class="pet_info">
+                                <img class="our_pet" src="./assets/img/pets/woody.png" alt="dog_woody">
+                                <p class="pet_info__name">Woody</p>
+                                <button class="pet_more">Learn more</button>
+                            </div>
+                            <div id="sophia" class="pet_info">
+                                <img class="our_pet" src="./assets/img/pets/sophia.png" alt="dog_sophia">
+                                <p class="pet_info__name">Sophia</p>
+                                <button class="pet_more">Learn more</button>
+                            </div>
+                            <div id="timmy" class="pet_info">
+                                <img class="our_pet" src="./assets/img/pets/timmy.png" alt="cat_timmy">
+                                <p class="pet_info__name">Timmy</p>
+                                <button class="pet_more">Learn more</button>
+                            </div>
+                            <div id="charly" class="pet_info">
+                                <img class="our_pet" src="./assets/img/pets/charly.png" alt="dog_charly">
+                                <p class="pet_info__name">Charly</p>
+                                <button class="pet_more">Learn more</button>
+                            </div>
+                            <div id="scarlett" class="pet_info">
+                                <img class="our_pet" src="./assets/img/pets/scarlett.png" alt="dog_scarlett">
+                                <p class="pet_info__name">Scarlett</p>
+                                <button class="pet_more">Learn more</button>
+                            </div>
+                            <div id="freddie" class="pet_info">
+                                <img class="our_pet" src="./assets/img/pets/freddie.png" alt="cat_freddie">
+                                <p class="pet_info__name">Freddie</p>
+                                <button class="pet_more">Learn more</button>
+                            </div>
                         </div>
                     </div>
                     <button class="img_next">&rarr;</button>
@@ -216,6 +263,6 @@
             <img class="footer_img" src="./assets/img/footer-puppy.png" alt="dog">
         </div>
     </footer>
-    <script src="./index.js"></script>
+    <script src="./index.js" type="module"></script>
 </body>
 </html>
