@@ -78,7 +78,7 @@ window.addEventListener('resize', (e) => {
 
     const prevImagesPerPage = imagesPerPage;
 
-    breakTotalPerPage(true);
+    breakTotalPerPage();
 
     const prevElement = prevImagesPerPage * currentPageNum;
 
@@ -110,8 +110,10 @@ function initPages() {
 
 function breakTotalPerPage(isSkipGenerating) {
     const fullPagesArray = (isSkipGenerating ? imageArray : generateImageArray()).flat(2);
+    console.log(fullPagesArray);
     imageArray = [];
     imagesPerPage = 48 / totalPagesCount;
+
     for (let i = 0; i < fullPagesArray.length; i+=imagesPerPage) {
         imageArray.push(fullPagesArray.slice(i, i + imagesPerPage));
     }
@@ -190,9 +192,15 @@ function generateImageArray() {
 }
 
 function getRandomOrder(arr) {
-    return arr
+    const arrStart = arr.slice(0, 4)
         .map(el => ({ ...el, random: Math.random() }))
-        .sort((a, b) => a.random - b.random)
+        .sort((a, b) => a.random - b.random);
+    const arrEnd = arr.slice(4, 8)
+        .map(el => ( { ...el, random: Math.random() }))
+        .sort((a, b) => a.random - b.random);
+    return [...arrStart, ...arrEnd];
+        // .map(el => ({ ...el, random: Math.random() }))
+        // .sort((a, b) => a.random - b.random)
 }
 
 /*Pop Up*/
