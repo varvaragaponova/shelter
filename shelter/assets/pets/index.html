@@ -20,16 +20,24 @@
             <nav class="shelter_menu">
                 <ul class="shelter_list">
                     <li class="shelter_item">
-                        <a href="../../index.html">About the shelter</a>
+                        <a href="../../index.html">
+                            <span>About the shelter</span>
+                        </a>
                     </li>
                     <li class="shelter_item">
-                        <a href="#">Our pets</a>
+                        <a href="#">
+                            <span>Our pets</span>
+                        </a>
                     </li>
                     <li class="shelter_item">
-                        <a href="../../index.html#help">Help the shelter</a>
+                        <a href="../../index.html#help">
+                            <span>Help the shelter</span>
+                        </a>
                     </li>
                     <li class="shelter_item">
-                        <a href="#contacts">Contacts</a>
+                        <a href="#contacts">
+                            <span>Contacts</span>
+                        </a>
                     </li>
                 </ul>
             </nav>
@@ -44,67 +52,63 @@
     <main>
         <section class="our_friends">
             <div class="content_container">
-                <h1>Our friends who <br>are looking for a house</h1>
-                <div class="pets_card__wrapper">
-                    <div class="pet_info">
-                        <img class="our_pet" src="../img/pets/katrine.png" alt="cat_katrine">
-                        <p class="pet_info__name">Katrine</p>
-                        <button class="pet_more">Learn more</button>
-                    </div>
-                    <div class="pet_info">
-                        <img class="our_pet" src="../img/pets/jennifer.png" alt="dog_jennifer">
-                        <p class="pet_info__name">Jennifer</p>
-                        <button class="pet_more">Learn more</button>
-                    </div>
-                    <div class="pet_info">
-                        <img class="our_pet" src="../img/pets/woody.png" alt="dog_woody">
-                        <p class="pet_info__name">Woody</p>
-                        <button class="pet_more">Learn more</button>
-                    </div>
-                    <div class="pet_info">
-                        <img class="our_pet" src="../img/pets/sophia.png" alt="dog_sophia">
-                        <p class="pet_info__name">Sophia</p>
-                        <button class="pet_more">Learn more</button>
-                    </div>
-                    <div class="pet_info">
-                        <img class="our_pet" src="../img/pets/timmy.png" alt="cat_timmy">
-                        <p class="pet_info__name">Timmy</p>
-                        <button class="pet_more">Learn more</button>
-                    </div>
-                    <div class="pet_info">
-                        <img class="our_pet" src="../img/pets/charly.png" alt="dog_charly">
-                        <p class="pet_info__name">Charly</p>
-                        <button class="pet_more">Learn more</button>
-                    </div>
-                    <div class="pet_info">
-                        <img class="our_pet" src="../img/pets/scarlett.png" alt="dog_scarlett">
-                        <p class="pet_info__name">Scarlett</p>
-                        <button class="pet_more">Learn more</button>
-                    </div>
-                    <div class="pet_info">
-                        <img class="our_pet" src="../img/pets/freddie.png" alt="cat_freddie">
-                        <p class="pet_info__name">Freddie</p>
-                        <button class="pet_more">Learn more</button>
+                <div class="overlay">
+                    <div class="pop_up__pet">
+                        <div class="pop_up__wrapper">
+                            <img src="../img/pets/jennifer.png" alt="dog" class="pop_up__img">
+                            <div class="pop_up__info">
+                                <div class="pop_up__name">
+                                    <h2 class="pop_up__title">Jennifer</h2>
+                                    <p class="pop_up__subtitle">Dog - Labrador</p>
+                                </div>
+                                <p class="pop_up__description">Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever home. This girl really enjoys being able to go outside to run and play, but won't hesitate to play up a storm in the house if she has all of her favorite toys.</p>
+                                <ul class="pop_up__details">
+                                    <li class="pop_up__item">
+                                        <span class="item_text">
+                                            <span class="bold">Age:</span><span class="age"> 2 months</span>
+                                        </span>
+                                    </li>
+                                    <li class="pop_up__item">
+                                        <span class="item_text">
+                                            <span class="bold">Inoculations:</span><span class="inoculations"> none</span>
+                                        </span>
+                                    </li>
+                                    <li class="pop_up__item">
+                                        <span class="item_text">
+                                            <span class="bold">Diseases:</span><span class="diseases"> none</span>
+                                        </span>
+                                    </li>
+                                    <li class="pop_up__item">
+                                    <span class="item_text">
+                                            <span class="bold">Parasites:</span><span class="parasites"> none</span>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <button class="pop_up__close">&times;</button>
                     </div>
                 </div>
+                <h1>Our friends who <br>are looking for a house</h1>
+                <div class="pets_card__wrapper"></div>
                 <div class="slider_btn__wrapper">
-                    <button class="prev" disabled="disabled">
+                    <button class="prev">
                         <svg width="25" height="11" viewBox="0 0 25 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M9.94687 10.7852L0.913671 6.08789V4.98438L9.94687 0.287109V1.625L2.43711 5.53125L9.94687 9.44727V10.7852ZM24.018 10.7852L14.9848 6.08789V4.98438L24.018 0.287109V1.625L16.5082 5.53125L24.018 9.44727V10.7852Z" fill="#292929"/>
                         </svg>
                     </button>
-                    <button class="prev" disabled="disabled">
+                    <button class="prev">
                         <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M9.98242 10.7852L0.949219 6.08789V4.98438L9.98242 0.287109V1.625L2.47266 5.53125L9.98242 9.44727V10.7852Z" fill="#292929"/>
                         </svg>
                     </button>
                     <button class="now">1</button>
-                    <button>
+                    <button class="next">
                         <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M9.04102 6.08789L0.0078125 10.7852V9.44727L7.51758 5.53125L0.0078125 1.625V0.287109L9.04102 4.98438V6.08789Z" fill="#292929"/>
                         </svg>
                     </button>
-                    <button>
+                    <button class="next">
                         <svg width="25" height="11" viewBox="0 0 25 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M10.0055 6.08789L0.972265 10.7852V9.44727L8.48203 5.53125L0.972265 1.625V0.287109L10.0055 4.98438V6.08789ZM24.0766 6.08789L15.0434 10.7852V9.44727L22.5531 5.53125L15.0434 1.625V0.287109L24.0766 4.98438V6.08789Z" fill="#292929"/>
                         </svg>
@@ -149,5 +153,6 @@
             <img class="footer_img" src="../img/footer-puppy.png" alt="dog">
         </div>
     </footer>
+    <script src="./index.js" type="module" defer></script>
 </body>
 </html>
