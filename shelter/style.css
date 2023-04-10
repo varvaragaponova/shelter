@@ -212,17 +212,17 @@ h1 {
     transition: all 0.5s;
 }
 
-/* .img_prev {
+.img_prev {
     order: 1;
 }
 
-.pet_cards {
+.pet_cards__wrapper {
     order: 2;
 }
 
 .img_next {
     order: 3;
-} */
+}
 
 .slider_wrapper {
     width: 100%;
@@ -1284,7 +1284,7 @@ html.stop {
         justify-content: space-between;
     }
 
-    .pet_cards {
+    .pet_cards__wrapper {
         order: 1;
     }
 

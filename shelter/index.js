@@ -6,7 +6,7 @@ const menuButton = document.getElementById('menu');
 const header = document.querySelector('header');
 const menu = document.querySelector('.shelter_menu');
 const body = document.querySelector('body');
-const pet = document.querySelectorAll('.pet_info');
+// const pet = document.querySelectorAll('.pet_info');
 const popUp = document.querySelector('.pop_up__pet');
 const html = document.querySelector('html');
 const popUpClose = document.querySelector('.pop_up__close');
@@ -19,10 +19,6 @@ const petInoculations = document.querySelector('.inoculations');
 const petDiseases = document.querySelector('.diseases');
 const petParasites = document.querySelector('.parasites');
 const overlay = document.querySelector('.overlay');
-const nextSlide = document.querySelector('.img_next');
-const prevSlide = document.querySelector('.img_prev');
-const cardWrapper = document.querySelector('.pet_cards');
-const cardBlock = document.querySelector('.pet_cards__wrapper');
 
 /*Burger*/
 
@@ -42,6 +38,168 @@ document.body.addEventListener('click', function(event) {
     }
 });
 
+/*Slider*/
+
+const nextSlide = document.querySelector('.img_next');
+const prevSlide = document.querySelector('.img_prev');
+const petCards = document.querySelector('.pet_cards');
+
+let clientWidth;
+let totalCards = 3;
+let currentArr = [];
+let nextArr = [];
+let prevArr = [];
+let randomArray = [];
+let usedCardsCount = 0;
+let prevPagesCount;
+
+nextSlide.addEventListener('click', forward);
+prevSlide.addEventListener('click', back);
+
+window.addEventListener('resize', (e) => {
+    const { clientWidth } = document.body;
+    if (clientWidth >= 1181) {
+        totalCards = 3;
+    } else if (clientWidth >= 768) {
+        totalCards = 2;
+    } else {
+        totalCards = 1;
+    }
+
+    if (prevPagesCount === totalCards) return;
+
+    init();
+});
+
+init();
+
+function init() {
+    prevPagesCount = totalCards;
+    generateRandomCards();
+    prevArr = fillArray();
+    currentArr = fillArray();
+    nextArr = fillArray();
+    renderCards();
+}
+
+function forward() {
+    prevArr = currentArr.slice();
+    currentArr = nextArr.slice();
+    nextArr = fillArray();
+
+    changeFirstImages();
+    changeCurrentImages();
+    changeLastImages();
+    const pet = document.querySelectorAll('.pet_info');
+    pet.forEach(item => {
+        item.addEventListener('click', (event) => petOpen(event, item));
+    })
+}
+
+function back() {
+    nextArr = currentArr.slice();
+    currentArr = prevArr.slice();
+    prevArr = fillArray();
+
+    changeFirstImages();
+    changeCurrentImages();
+    changeLastImages();
+    const pet = document.querySelectorAll('.pet_info');
+    pet.forEach(item => {
+        item.addEventListener('click', (event) => petOpen(event, item));
+    })
+}
+
+function changeCurrentImages() {
+    const domImages = document.querySelectorAll('.pet_info');
+    for (let i = 0; i < totalCards; i++) {
+        const el = currentArr[i];
+        const cardStr = `
+            <div id="${el.name}" class="pet_info">
+                <img class="our_pet" src="${el.img}" alt="${el.type}">
+                <p class="pet_info__name">${el.name}</p>
+                <button class="pet_more">Learn more</button>
+            </div>
+            `;
+        domImages[prevArr.length + i].outerHTML = cardStr;
+    }
+}
+
+function changeLastImages() {
+    let i = 0;
+    while (i < totalCards) {
+        const domImages = document.querySelectorAll('.pet_info');
+        domImages[domImages.length - 1].remove();
+        i++;
+    }
+    nextArr.forEach(el => {
+        const cardStr = `
+            <div id="${el.name}" class="pet_info">
+                <img class="our_pet" src="${el.img}" alt="${el.type}">
+                <p class="pet_info__name">${el.name}</p>
+                <button class="pet_more">Learn more</button>
+            </div>
+            `;
+        petCards.insertAdjacentHTML('beforeend', cardStr);
+    });
+}
+
+function changeFirstImages() {
+    const domImages = document.querySelectorAll('.pet_info');
+    for (let i = 0; i < totalCards; i++) {
+        domImages[i].remove();
+    }
+    prevArr.forEach(el => {
+        const cardStr = `
+            <div id="${el.name}" class="pet_info">
+                <img class="our_pet" src="${el.img}" alt="${el.type}">
+                <p class="pet_info__name">${el.name}</p>
+                <button class="pet_more">Learn more</button>
+            </div>
+            `;
+        petCards.insertAdjacentHTML('afterbegin', cardStr);
+    });
+}
+
+function fillArray() {
+    const arr = [];
+    for (let i = 0; i < totalCards; i++) {
+        if (usedCardsCount === randomArray.length) {
+            usedCardsCount = 0;
+        }
+        arr.push(randomArray[usedCardsCount]);
+        usedCardsCount++;
+    }
+    return arr;
+}
+
+function renderCards() {
+    petCards.innerHTML = '';
+    [...prevArr, ...currentArr, ...nextArr].forEach(el => {
+        const cardStr = `
+            <div id="${el.name}" class="pet_info">
+                <img class="our_pet" src="${el.img}" alt="${el.type}">
+                <p class="pet_info__name">${el.name}</p>
+                <button class="pet_more">Learn more</button>
+            </div>
+        `;
+        petCards.insertAdjacentHTML('beforeend', cardStr);
+    });
+    const offset = petCards.offsetWidth;
+    const gap = getComputedStyle(petCards).gap;
+    petCards.style.transform = 'translateX(calc(' + (-offset) + 'px ' + '- ' + gap + '))';
+    const pet = document.querySelectorAll('.pet_info');
+    pet.forEach(item => {
+        item.addEventListener('click', (event) => petOpen(event, item));
+    })
+}
+
+function generateRandomCards() {
+    randomArray = json
+        .map(el => ({...el, random: Math.random()}))
+        .sort((a, b) => a.random - b.random);
+}
+
 /*POP UP*/
 
 const petOpen = (event, item) => {
@@ -50,7 +208,7 @@ const petOpen = (event, item) => {
     html.classList.toggle("stop");
     event.stopPropagation();
 
-    const currentPet = json.find(elem => elem.name.toLowerCase() === item.id);
+    const currentPet = json.find(elem => elem.name === item.id);
     popUpImg.src = currentPet.img;
     petName.textContent = currentPet.name;
     petIs.textContent = `${currentPet.type} - ${currentPet.breed}`;
@@ -60,10 +218,6 @@ const petOpen = (event, item) => {
     petDiseases.textContent = ' ' + currentPet.diseases;
     petParasites.textContent = ' ' + currentPet.parasites;
 }
-
-pet.forEach(item => {
-    item.addEventListener('click', (event) => petOpen(event, item));
-})
 
 document.body.addEventListener('click', function() {
     if (popUp.classList.contains('opened')) {
