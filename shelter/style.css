@@ -711,17 +711,25 @@ html.stop {
     }
 }
 
-@media screen and (max-width: 800px) and (min-width: 780px) {
+@media screen and (max-width: 779px) and (min-width: 769px) {
+    .pet_cards {
+        gap: 8.7%;
+    }
+}
+
+@media screen and (max-width: 790px) and (min-width: 780px) {
+    .pet_cards {
+        gap: 9.2%;
+    }
+}
+
+@media screen and (max-width: 800px) and (min-width: 791px) {
     .pet_cards {
         gap: 10%;
     }
 }
 
-@media screen and (max-width: 779px) and (min-width: 769px) {
-    .pet_cards {
-        gap: 9%;
-    }
-}
+
 
 @media screen and (max-width: 1023.8px) and (min-width: 769px) {
     /*Header*/
