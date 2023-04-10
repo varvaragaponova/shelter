@@ -19,6 +19,13 @@ const petDiseases = document.querySelector('.diseases');
 const petParasites = document.querySelector('.parasites');
 const overlay = document.querySelector('.overlay');
 
+const petsWrapper = document.querySelector('.pets_card__wrapper');
+const currentPageNumber = document.querySelector('.now');
+const firstPage = document.querySelectorAll('.prev')[0];
+const prevPage = document.querySelectorAll('.prev')[1];
+const nextPage = document.querySelectorAll('.next')[0];
+const lastPage = document.querySelectorAll('.next')[1];
+
 menuButton.addEventListener('click', function(event) {
     header.classList.toggle('open');
     body.classList.toggle('no_scroll');
@@ -36,13 +43,6 @@ document.body.addEventListener('click', function(event) {
 });
 
 /*Pagination*/
-const petsWrapper = document.querySelector('.pets_card__wrapper');
-const currentPageNumber = document.querySelector('.now');
-const firstPage = document.querySelectorAll('.prev')[0];
-const prevPage = document.querySelectorAll('.prev')[1];
-
-const nextPage = document.querySelectorAll('.next')[0];
-const lastPage = document.querySelectorAll('.next')[1];
 
 document.addEventListener('DOMContentLoaded', initPages);
 nextPage.addEventListener('click', () => turnPage(1));
@@ -119,6 +119,7 @@ function breakTotalPerPage(isSkipGenerating) {
     }
     // console.log(imageArray);
 }
+
 function turnPage(offset) {
     if (offset > 0) {
         currentPageNum++;
@@ -199,8 +200,6 @@ function getRandomOrder(arr) {
         .map(el => ( { ...el, random: Math.random() }))
         .sort((a, b) => a.random - b.random);
     return [...arrStart, ...arrEnd];
-        // .map(el => ({ ...el, random: Math.random() }))
-        // .sort((a, b) => a.random - b.random)
 }
 
 /*Pop Up*/
