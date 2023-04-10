@@ -588,7 +588,6 @@ footer a {
 html.stop {
     overflow-y: hidden;
 }
-
 /*--HOOVER AND ACTIVE--*/
 
 @media (any-hover: hover) {
@@ -708,7 +707,19 @@ html.stop {
         max-width: 600px;
         justify-content: start;
         margin-bottom: 20px;
-        gap: 9%
+        gap: 9.5%;
+    }
+}
+
+@media screen and (max-width: 800px) and (min-width: 780px) {
+    .pet_cards {
+        gap: 10%;
+    }
+}
+
+@media screen and (max-width: 779px) and (min-width: 769px) {
+    .pet_cards {
+        gap: 9%;
     }
 }
 
