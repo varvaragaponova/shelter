@@ -188,7 +188,9 @@ function renderCards() {
     const offset = petCards.offsetWidth;
     const gap = getComputedStyle(petCards).gap;
     const { clientWidth } = document.body;
-    if (clientWidth = 768) {
+    if (clientWidth == 768) {
+            petCards.style.transform = 'translateX(calc(' + (-offset) + 'px ' + '- ' + gap + '))';
+    } else if (clientWidth <= 1180) {
         petCards.style.transform = 'translateX(calc(' + (-offset) + 'px ' + '- ' + gap + '))';
     } else if (clientWidth <= 1208) {
         petCards.style.transform = 'translateX(calc(' + (-offset) + 'px))';
