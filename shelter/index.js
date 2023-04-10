@@ -58,7 +58,7 @@ prevSlide.addEventListener('click', back);
 
 window.addEventListener('resize', (e) => {
     const { clientWidth } = document.body;
-    if (clientWidth >= 1181) {
+    if (clientWidth > 1208) {
         totalCards = 3;
     } else if (clientWidth >= 768) {
         totalCards = 2;
@@ -187,7 +187,12 @@ function renderCards() {
     });
     const offset = petCards.offsetWidth;
     const gap = getComputedStyle(petCards).gap;
-    petCards.style.transform = 'translateX(calc(' + (-offset) + 'px ' + '- ' + gap + '))';
+    const { clientWidth } = document.body;
+    if (clientWidth <= 1208) {
+        petCards.style.transform = 'translateX(calc(' + (-offset) + 'px))';
+    } else {
+        petCards.style.transform = 'translateX(calc(' + (-offset) + 'px ' + '- ' + gap + '))';
+    }
     const pet = document.querySelectorAll('.pet_info');
     pet.forEach(item => {
         item.addEventListener('click', (event) => petOpen(event, item));
