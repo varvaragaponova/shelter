@@ -1,4 +1,4 @@
-// console.log("Итоговая оценка: 106.\nСделаны полностью бургер, попап и пагинация, в слайдере не реализована анимация. Карточки в слайдере генерируются нормально, по крайне мере, мне повторов не попадалось.\nСпасибо за проверку и хорошего дня!");
+console.log("Итоговая оценка: 106.\nСделаны полностью бургер, попап и пагинация, в слайдере не реализована анимация. Карточки в слайдере генерируются нормально, по крайне мере, мне повторов не попадалось.\nСпасибо за проверку и хорошего дня!");
 
 import json from './pets.json' assert { type: 'json'};
 
@@ -43,6 +43,7 @@ document.body.addEventListener('click', function(event) {
 const nextSlide = document.querySelector('.img_next');
 const prevSlide = document.querySelector('.img_prev');
 const petCards = document.querySelector('.pet_cards');
+const wrapper = document.querySelector('.slider_wrapper');
 
 let clientWidth;
 let totalCards = 3;
@@ -188,6 +189,7 @@ function renderCards() {
     const offset = petCards.offsetWidth;
     const gap = getComputedStyle(petCards).gap;
     const { clientWidth } = document.body;
+    // petCards.style.transition = 'transform .5s';
     if (clientWidth == 768) {
             petCards.style.transform = 'translateX(calc(' + (-offset) + 'px ' + '- ' + gap + '))';
     } else if (clientWidth <= 1180) {
